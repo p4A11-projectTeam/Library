@@ -48,10 +48,10 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a href="/Test/librarian/dashboard.php"><i class="fa fa-home"></i> Home </a>
+                            <li><a href="/Library/librarian/dashboard.php"><i class="fa fa-home"></i> Home </a>
 
                             </li>
-                            <li><a href="/Test/librarian/add_books.php"><i class="fa fa-edit"></i> Add Books </a>
+                            <li><a href="/Library/librarian/add_books.php"><i class="fa fa-edit"></i> Add Books </a>
 
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Issue Books </a>
@@ -63,7 +63,7 @@
                             <li><a><i class="fa fa-bar-chart-o"></i> Manage Student </a>
 
                             </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Send Message </a>
+                            <li><a href="/Library/librarian/send_notification.php"><i class="fa fa-bar-chart-o"></i> Send Message </a>
 
                             </li>
 
@@ -92,7 +92,7 @@
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="/Test/index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                <li><a href="/Library/index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
 
