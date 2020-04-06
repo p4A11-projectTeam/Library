@@ -42,9 +42,8 @@
                                                 <?php
                                                 $res=mysqli_query($link, "select * from student");
                                                 while($row=mysqli_fetch_array($res)){
-                                                    
                                                     ?><option>
-                                                        <?php echo $row["username"]."(".$row["usn"].")";  ?>
+                                                        <?php echo $row["username"]."(". $row["usn"].")";  ?>
                                                     </option><?php
                                                 }
                                                 ?>

@@ -48,19 +48,22 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a href="/Library/librarian/dashboard.php"><i class="fa fa-home"></i> Home </a>
+                            <li><a href="/Library/librarian/dashboard.php"><i class="fa fa-home"></i> All student info </a>
 
                             </li>
                             <li><a href="/Library/librarian/add_books.php"><i class="fa fa-edit"></i> Add Books </a>
 
                             </li>
-                            <li><a><i class="fa fa-desktop"></i> Issue Books </a>
+                            <li><a href="/Library/librarian/display_books.php"><i class="fa fa-desktop"></i> Display Books </a>
 
                             </li>
-                            <li><a><i class="fa fa-table"></i> Manage Books </a>
+                            <li><a><i class="fa fa-table"></i> Issue Books </a>
 
                             </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Manage Student </a>
+                            <li><a><i class="fa fa-bar-chart-o"></i> Return Books </a>
+
+                            </li>
+                            <li><a><i class="fa fa-bar-chart-o"></i>Books with all info </a>
 
                             </li>
                             <li><a href="/Library/librarian/send_notification.php"><i class="fa fa-bar-chart-o"></i> Send Message </a>
