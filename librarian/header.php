@@ -57,7 +57,7 @@
                             <li><a href="/Library/librarian/display_books.php"><i class="fa fa-desktop"></i> Display Books </a>
 
                             </li>
-                            <li><a><i class="fa fa-table"></i> Issue Books </a>
+                            <li><a href="/Library/librarian/issue_books.php"><i class="fa fa-table"></i> Issue Books </a>
 
                             </li>
                             <li><a><i class="fa fa-bar-chart-o"></i> Return Books </a>

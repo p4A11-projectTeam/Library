@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "header.php";
     include "connection.php";
 ?>
@@ -38,11 +39,11 @@
                                 <table class="table table-bordered">
                                     <tr>
                                         <td>
-                                            <select class="form-control">
+                                            <select class="form-control" name="dusername">
                                                 <?php
-                                                $res=mysqli_query($link, "select * from student");
+                                                $res=mysqli_query($db, "select * from student");
                                                 while($row=mysqli_fetch_array($res)){
-                                                    ?><option>
+                                                    ?><option value="<?php echo $row["username"]?>" >
                                                         <?php echo $row["username"]."(". $row["usn"].")";  ?>
                                                     </option><?php
                                                 }
@@ -50,7 +51,25 @@
                                             </select>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control" name="title" placeholder="Enter Title">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Message <br>
+                                            <textarea name="msg" class="form-control">
+                                            </textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" value="send message" name="submit1" >
+                                        </td>
+                                    </tr>
                                 </table>
+                                
                             </form>
                             </div>
                         </div>
@@ -59,7 +78,20 @@
             </div>
         </div>
         <!-- /page content -->
+<?php
+    if(isset($_POST["submit1"])){
+        mysqli_query($db, "insert into messages values('','$_SESSION[librarian]','$_POST[dusername]','$_POST[title]','$_POST[msg]','n')")
+    ?>
+    <script type="text/javascript">
+        alert("message sent successfully!");
+    </script>
+    <?php
+        
+    
+    
+    }
 
+?>
 
 <?php
     include "footer.php";
