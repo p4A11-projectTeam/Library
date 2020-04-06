@@ -30,14 +30,12 @@
         }
         if($count==0)
         {
-          mysqli_query($db,"INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[email]', '$_POST[usn]', '$_POST[contact]', '$_POST[password]');");
+          mysqli_query($db,"INSERT INTO `student`(`first`, `last`, `username`, `email`, `usn`, `contact`, `password`, `status`) VALUES ('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[email]', '$_POST[usn]', '$_POST[contact]', '$_POST[password]', 'no');");
         ?>
           <script type="text/javascript">
-           alert("Registration successful, Please login now.");
-           window.location="/Test/index.html";
+           alert("Registration successful");
           </script>
         <?php
-        
         }
         else
         {
