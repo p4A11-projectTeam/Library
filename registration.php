@@ -34,7 +34,7 @@
         ?>
           <script type="text/javascript">
            alert("Registration successful, Please login now.");
-           window.location="/Test/index.html";
+           window.location="/Library/index.html";
           </script>
         <?php
         

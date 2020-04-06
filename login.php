@@ -41,7 +41,7 @@
           ?>
             <script type="text/javascript">
             
-              window.location="/Test/student/dashboard.php"
+              window.location="/Library/student/dashboard.php"
             </script>
           <?php
 
