@@ -9,6 +9,7 @@ h5{
     justify:left;
 }
 </style>
+<!--rand-->
         <!-- page content area main -->
         <div class="right_col" role="main">
             <div class="">
