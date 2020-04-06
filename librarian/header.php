@@ -48,7 +48,7 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a href="/Library/librarian/dashboard.php"><i class="fa fa-home"></i> All student info </a>
+                            <li><a href="/Library/librarian/student_info.php"><i class="fa fa-home"></i> All student info </a>
 
                             </li>
                             <li><a href="/Library/librarian/add_books.php"><i class="fa fa-edit"></i> Add Books </a>
