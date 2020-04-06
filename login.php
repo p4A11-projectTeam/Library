@@ -18,10 +18,9 @@
       if(isset($_POST['submit']))
       {
         $count=0;
-        $sql="SELECT username from `student` where email='$_POST[email]' && password='$_POST[password]' ";
+        $sql="SELECT username from `student` where email='$_POST[email]' && password='$_POST[password]' && status='yes' ";
         $res=mysqli_query($db,$sql);
         $count=mysqli_num_rows($res);
-        $username = $sql;
 
         
         if($count==0)
@@ -35,13 +34,12 @@
         }
         else
         {
-           
-
 
           ?>
             <script type="text/javascript">
-            
-              window.location="/Test/student/dashboard.php"
+
+              window.location="/Library/student/dashboard.php"
+
             </script>
           <?php
 
