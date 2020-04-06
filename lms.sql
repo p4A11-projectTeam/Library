@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2020 at 05:57 PM
+-- Generation Time: Apr 06, 2020 at 12:54 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -68,9 +68,23 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`isbn`, `name`, `author`, `edition`, `price`, `qty`, `img`, `availability`, `usn`, `libusername`) VALUES
-(1234, 'xya', 'abc', 2, 123, 10, 'Basic Electrical Engineering - D.C.Kulshreshta.jpg', 10, '', ''),
 (6789, 'comp', 'asasa', 4, 345, 13, 'books_image/a26e4df0a19a04695445d6e8b6a48b45Computer Fundamentals and Programming in C - Reema Thareja.jfif', 13, '', ''),
 (44533, 'compp', 'adsd', 4, 122, 13, 'books_image/e557a7035fce6ab365ec07821e96556fBasic Electronics Devices Circuits and its Fundamentals -Santiram Kal.jpg', 13, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(5) NOT NULL,
+  `susername` varchar(50) NOT NULL,
+  `dusername` varchar(50) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `msg` varchar(500) NOT NULL,
+  `read1` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -86,8 +100,17 @@ CREATE TABLE `student` (
   `email` varchar(100) NOT NULL,
   `usn` varchar(30) NOT NULL,
   `contact` int(12) NOT NULL,
-  `password` varchar(12) NOT NULL
+  `password` varchar(12) NOT NULL,
+  `status` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`id`, `first`, `last`, `username`, `email`, `usn`, `contact`, `password`, `status`) VALUES
+(1, 'abc', 'xyz', 'asdf', 'asdf@gmail.com', '1bm18cs000', 1223243434, '1234', 'yes'),
+(2, 'Anu', 'K', 'anu', 'anu@gmail.com', '1bm18cs100', 1425666478, '2468', 'yes');
 
 --
 -- Indexes for dumped tables
@@ -104,6 +127,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `books`
   ADD PRIMARY KEY (`isbn`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `student`
@@ -123,10 +152,16 @@ ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
