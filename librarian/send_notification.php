@@ -78,6 +78,7 @@
             </div>
         </div>
         <!-- /page content -->
+        <!--rand-->
 <?php
     if(isset($_POST["submit1"])){
         mysqli_query($db, "insert into messages values('','$_SESSION[librarian]','$_POST[dusername]','$_POST[title]','$_POST[msg]','n')")
