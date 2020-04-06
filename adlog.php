@@ -39,7 +39,7 @@
 
           ?>
             <script type="text/javascript">
-              window.location="/Test/librarian/dashboard.php";
+              window.location="/Library/librarian/dashboard.php";
             </script>
           <?php
 
