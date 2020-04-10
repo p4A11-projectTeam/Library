@@ -108,7 +108,7 @@
                                         echo "<td>"; ?> <img src="<?php echo $row["img"]; ?> " height="100" width="100" > <?php echo "</td>";
                                         echo "<td>"; echo $row["availability"]; echo "</td>";
                                         echo "<td class='bg-warning'>"; 
-                                        ?> <a href="delete_books.php?id=<?php echo $row["isbn"]; ?>">Delete</a><?php
+                                        ?> <a href="delete_books.php?isbn=<?php echo $row["isbn"]; ?>">Delete</a><?php
                                         echo "</td>";
                                         echo "</tr>";
                                     }
