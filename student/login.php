@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include "connection.php";
   
 ?>
@@ -18,10 +19,10 @@
       if(isset($_POST['submit']))
       {
         $count=0;
-        $sql="SELECT username from `student` where email='$_POST[email]' && password='$_POST[password]' && status='yes' ";
+        $sql="SELECT * from `student` where username='$_POST[username]' && password='$_POST[password]' && status='yes' ";
         $res=mysqli_query($db,$sql);
         $count=mysqli_num_rows($res);
-
+        
         
         if($count==0)
         {
@@ -34,11 +35,12 @@
         <?php
         }
         else
-        {
-
+        { //echo $_POST["username"];
+          $_SESSION["username"] = $_POST["username"];
+          //echo $_SESSION["username"];
           ?>
             <script type="text/javascript">
-
+              
               window.location="/Library/student/dashboard.php"
 
             </script>

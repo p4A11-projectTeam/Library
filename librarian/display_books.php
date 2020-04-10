@@ -33,7 +33,44 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
+                            <!--form to search books -->
+                            <form name=form1 action="" method="post">
+                                <input type="text" name="t1" class="form-control" placeholder="Enter book name">
+                                <input type="submit" name="submit1" value="search books" class="btn btn-default">
+                            </form>
+
                                 <?php
+
+                                    if(isset($_POST["submit1"])){
+
+                                        $res=mysqli_query($db,"SELECT * FROM `books` where name like ('$_POST[t1]%') ");
+                                        echo "<table class='table table-bordered'>";
+                                        echo "<tr>";
+                                        echo "<th>"; echo "ISBN"; echo "</th>";
+                                        echo "<th>"; echo "Name"; echo "</th>";
+                                        echo "<th>"; echo "Author"; echo "</th>";
+                                        echo "<th>"; echo "Edition"; echo "</th>";
+                                        echo "<th>"; echo "Price"; echo "</th>";
+                                        echo "<th>"; echo "Quantity"; echo "</th>";
+                                        echo "<th>"; echo "Image"; echo "</th>";
+                                        echo "<th>"; echo "Availability"; echo "</th>";
+                                        echo "</tr>";
+                                        while ($row=mysqli_fetch_array($res)){
+                                            echo "<tr>";
+                                            echo "<td>"; echo $row["isbn"]; echo "</td>";
+                                            echo "<td>"; echo $row["name"]; echo "</td>";
+                                            echo "<td>"; echo $row["author"]; echo "</td>";
+                                            echo "<td>"; echo $row["edition"]; echo "</td>";
+                                            echo "<td>"; echo $row["price"]; echo "</td>";
+                                            echo "<td>"; echo $row["qty"]; echo "</td>";
+                                            echo "<td>"; ?> <img src="<?php echo $row["img"]; ?> " height="100" width="100" > <?php echo "</td>";
+                                            echo "<td>"; echo $row["availability"]; echo "</td>";
+                                            echo "</tr>";
+                                        }
+                                        
+                                        echo "</table>";
+                                    }else{
+
                                     $res=mysqli_query($db,"SELECT * FROM `books`");
                                     echo "<table class='table table-bordered'>";
                                     echo "<tr>";
@@ -61,7 +98,7 @@
                                     
                                     echo "</table>";
 
-
+                                }
 
                                 ?>
                             </div>
