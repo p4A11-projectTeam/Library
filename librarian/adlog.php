@@ -40,7 +40,7 @@
 
           ?>
             <script type="text/javascript">
-              window.location="/Library/librarian/dashboard.php";
+              window.location="/Library/librarian/student_info.php";
             </script>
           <?php
 
