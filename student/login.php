@@ -20,6 +20,7 @@
       {
         $count=0;
         $sql="SELECT * from `student` where username='$_POST[username]' && password='$_POST[password]' && status='yes' ";
+       
         $res=mysqli_query($db,$sql);
         $count=mysqli_num_rows($res);
         
@@ -37,6 +38,7 @@
         else
         { //echo $_POST["username"];
           $_SESSION["username"] = $_POST["username"];
+          
           //echo $_SESSION["username"];
           ?>
             <script type="text/javascript">

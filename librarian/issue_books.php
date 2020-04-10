@@ -90,6 +90,7 @@ h5{
                                                             $lastname=$row3["last"];
                                                             $usn=$row3["usn"];
                                                             $_SESSION['usn']=$usn;
+                                                           
                                                             
                                                            
 
