@@ -3,8 +3,8 @@
     include "connection.php";
     $tot = 0;
     //echo $_SESSION["username"];
-    $result = mysqli_query($db, "select * from `messages` where `dusername` = `$_SESSION[username]` && `read1`=`n` ");
-    //$tot = mysqli_num_rows($result);
+    $result = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[username]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
+    $tot = mysqli_num_rows($result);
     
 ?>
 
@@ -109,7 +109,7 @@
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
                                aria-expanded="false">
                                 <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green" onclick="window.location='msg_from_lib.php'"><?php  //echo $tot; ?></span>
+                                <span class="badge bg-green" onclick="window.location='msg_from_lib.php'"><?php  echo $tot; ?></span>
                             </a>
 
                         </li>
