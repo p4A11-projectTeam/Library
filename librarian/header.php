@@ -35,7 +35,7 @@
                     <div class="profile_info">
                         <span>Welcome,</span>
 
-                        <h2>Librarian</h2>
+                        <h2><?php echo $_SESSION["librarian"]; ?></h2>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -91,11 +91,11 @@
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="images/admin.png" alt="">Librarian
+                                <img src="images/admin.png" alt=""><?php echo $_SESSION["librarian"]; ?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="/Library/index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
 

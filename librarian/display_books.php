@@ -1,4 +1,13 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["librarian"])){
+
+        ?>
+        <script type="text/javascript">
+            window.location="/Library/index.html";
+        </script>
+        <?php
+    }
     include "connection.php";
     include "header.php";
 ?>
@@ -54,6 +63,7 @@
                                         echo "<th>"; echo "Quantity"; echo "</th>";
                                         echo "<th>"; echo "Image"; echo "</th>";
                                         echo "<th>"; echo "Availability"; echo "</th>";
+                                        echo "<th>"; echo "Delete"; echo "</th>";
                                         echo "</tr>";
                                         while ($row=mysqli_fetch_array($res)){
                                             echo "<tr>";
@@ -65,6 +75,9 @@
                                             echo "<td>"; echo $row["qty"]; echo "</td>";
                                             echo "<td>"; ?> <img src="<?php echo $row["img"]; ?> " height="100" width="100" > <?php echo "</td>";
                                             echo "<td>"; echo $row["availability"]; echo "</td>";
+                                            echo "<td class='bg-warning'>"; 
+                                            ?> <a href="delete_books.php?id=<?php echo $row["isbn"]; ?>">Delete</a><?php
+                                            echo "</td>";
                                             echo "</tr>";
                                         }
                                         
@@ -82,6 +95,7 @@
                                     echo "<th>"; echo "Quantity"; echo "</th>";
                                     echo "<th>"; echo "Image"; echo "</th>";
                                     echo "<th>"; echo "Availability"; echo "</th>";
+                                    echo "<th>"; echo "Delete"; echo "</th>";
                                     echo "</tr>";
                                     while ($row=mysqli_fetch_array($res)){
                                         echo "<tr>";
@@ -93,6 +107,9 @@
                                         echo "<td>"; echo $row["qty"]; echo "</td>";
                                         echo "<td>"; ?> <img src="<?php echo $row["img"]; ?> " height="100" width="100" > <?php echo "</td>";
                                         echo "<td>"; echo $row["availability"]; echo "</td>";
+                                        echo "<td class='bg-warning'>"; 
+                                        ?> <a href="delete_books.php?id=<?php echo $row["isbn"]; ?>">Delete</a><?php
+                                        echo "</td>";
                                         echo "</tr>";
                                     }
                                     
