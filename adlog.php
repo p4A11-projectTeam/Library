@@ -29,6 +29,7 @@
           
         ?>
           <script type="text/javascript">
+          window.location="/Library/index.html";
            alert("Username and password doesn't match");
           </script>
         <?php

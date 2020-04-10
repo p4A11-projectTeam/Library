@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    include "connection.php";
+    $tot = 0;
+    //echo $_SESSION["username"];
+    $result = mysqli_query($db, "select * from `messages` where `dusername` = `$_SESSION[username]` && `read1`=`n` ");
+    //$tot = mysqli_num_rows($result);
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,10 +58,10 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-home"></i> My issued books <span class="fa fa-chevron-down"></span></a>
 
                             </li>
-                            <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-edit"></i> Search Books <span class="fa fa-chevron-down"></span></a>
 
                             </li>
                             <li><a><i class="fa fa-desktop"></i> UI Elements <span
@@ -99,7 +109,7 @@
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
                                aria-expanded="false">
                                 <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green">6</span>
+                                <span class="badge bg-green" onclick="window.location='msg_from_lib.php'"><?php  //echo $tot; ?></span>
                             </a>
 
                         </li>
