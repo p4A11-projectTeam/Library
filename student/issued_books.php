@@ -1,4 +1,13 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["username"])){
+
+    ?>
+    <script type="text/javascript">
+        window.location="/Library/index.html";
+    </script>
+    <?php
+    }
     include "connection.php";
     include "header.php";
 ?>

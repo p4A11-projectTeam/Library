@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
     include "connection.php";
     $tot = 0;
     //echo $_SESSION["username"];
@@ -24,6 +24,10 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/nprogress.css" rel="stylesheet">
     <link href="css/custom.min.css" rel="stylesheet">
+
+    <!--Custom css-->
+    <link href="imageModal.css" rel="stylesheet">
+
 </head>
 
 <body class="nav-md">
@@ -45,7 +49,7 @@
                     <div class="profile_info">
                         <span>Welcome,</span>
 
-                        <h2>JOhn Doe </h2>
+                        <h2><?php echo $_SESSION["username"] ?></h2>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -58,21 +62,17 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a href="/Library/student/issued_books.php"><i class="fa fa-home"></i> My issued books <span class="fa fa-chevron-down"></span></a>
+                            <li><a href="/Library/student/issued_books.php"><i class="fa fa-home"></i> My issued books </a>
+                            </li>
+                            <li><a href="search_books.php"><i class="fa fa-edit"></i> Search Books </a>
+                            </li>
+                            <li><a><i class="fa fa-desktop"></i> UI Elements </span></a>
 
                             </li>
-                            <li><a href="/Library/student/search_books.php"><i class="fa fa-edit"></i> Search Books <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-table"></i> Tables </a>
 
                             </li>
-                            <li><a><i class="fa fa-desktop"></i> UI Elements <span
-                                    class="fa fa-chevron-down"></span></a>
-
-                            </li>
-                            <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-
-                            </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span
-                                    class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation </a>
 
                             </li>
 
@@ -97,19 +97,19 @@
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="images/img.jpg" alt="">John Doe
+                                <img src="images/img.jpg" alt=""><?php echo $_SESSION["username"] ?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="/Library/index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
 
                         <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                               aria-expanded="false">
+                            <a  class="dropdown-toggle info-number" data-toggle="dropdown"
+                               aria-expanded="false" onclick="window.location='/Library/student/msg_from_lib.php';">
                                 <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green" onclick="window.location='msg_from_lib.php'"><?php  echo $tot; ?></span>
+                                <span class="badge bg-green" onclick="window.location='/Library/student/msg_from_lib.php';"><?php  echo $tot; ?></span>
                             </a>
 
                         </li>

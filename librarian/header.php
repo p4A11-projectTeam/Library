@@ -14,6 +14,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/nprogress.css" rel="stylesheet">
     <link href="css/custom.min.css" rel="stylesheet">
+
 </head>
 
 <body class="nav-md">
@@ -66,7 +67,7 @@
                             <li><a><i class="fa fa-bar-chart-o"></i>Books with all info </a>
 
                             </li>
-                            <li><a href="/Library/librarian/send_notification.php"><i class="fa fa-bar-chart-o"></i> Send Message </a>
+                            <li><a href="/Library/librarian/send_notification.php"><i class="fa fa-mail-forward"></i> Send Message </a>
 
                             </li>
 
