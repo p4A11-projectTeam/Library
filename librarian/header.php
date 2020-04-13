@@ -64,7 +64,7 @@
                             <li><a href="/Library/librarian/return_books.php"><i class="fa fa-bar-chart-o"></i> Return Books </a>
 
                             </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i>Books with all info </a>
+                            <li><a href="/Library/librarian/books_details_with_student.php"><i class="fa fa-bar-chart-o"></i>Books with all info </a>
 
                             </li>
                             <li><a href="/Library/librarian/send_notification.php"><i class="fa fa-mail-forward"></i> Send Message </a>
