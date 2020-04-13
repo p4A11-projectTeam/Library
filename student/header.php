@@ -63,10 +63,8 @@
                         <h3>General</h3>
                         <ul class="nav side-menu">
                             <li><a href="/Library/student/issued_books.php"><i class="fa fa-home"></i> My issued books </a>
-
                             </li>
                             <li><a href="search_books.php"><i class="fa fa-edit"></i> Search Books </a>
-
                             </li>
                             <li><a><i class="fa fa-desktop"></i> UI Elements </span></a>
 

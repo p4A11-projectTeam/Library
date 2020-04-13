@@ -12,11 +12,7 @@ include "header.php";
 include "connection.php";
 
 ?>
-<style>
-h5{
-    justify:left;
-}
-</style>
+
 <!--rand-->
         <!-- page content area main -->
         <div class="right_col" role="main">
@@ -243,6 +239,7 @@ h5{
                                                                 <?php
 
                                                             }
+                                                            
                                                             else{
 
                                                             
@@ -255,11 +252,11 @@ h5{
                                                             
                                                             $query="INSERT INTO `issue_books`(`issueid`, `usn`, `books_name`, `issue_date`, `return_date`, `edition`, `student_name`) VALUES (' ','$usn','$books_name','$issue_date',' $rdate','$edition','$student_name')";
                                                           $result= mysqli_query($db,$query);
-                                                          mysqli_query($db,"UPDATE `books` SET `availability`=`availability`-1 where `name`='$books_name'");
+                                                          mysqli_query($db,"UPDATE `books` SET `availability`=`availability`-1 where `name`='$books_name' and `edition`='$edition'");
                                                         
                                                         ?>
                                                         <script type="text/javascript">
-                                                              alert("Books issued successfully!");
+                                                              alert("Book issued successfully!");
                                                         window.location.href=window.location.href;
                                                         </script>
                                                         <?php
