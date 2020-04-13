@@ -20,7 +20,7 @@ while($row=mysqli_fetch_array($res)){
     $books_name=$row["books_name"];
     $edition=$row["edition"];
 }
-if($return_date > $a)
+if($return_date < $a)
 {
     ?>
     <div class="right_col" role="main">
