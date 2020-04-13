@@ -61,7 +61,7 @@
                             <li><a href="/Library/student/issued_books.php"><i class="fa fa-home"></i> My issued books <span class="fa fa-chevron-down"></span></a>
 
                             </li>
-                            <li><a><i class="fa fa-edit"></i> Search Books <span class="fa fa-chevron-down"></span></a>
+                            <li><a href="/Library/student/search_books.php"><i class="fa fa-edit"></i> Search Books <span class="fa fa-chevron-down"></span></a>
 
                             </li>
                             <li><a><i class="fa fa-desktop"></i> UI Elements <span
