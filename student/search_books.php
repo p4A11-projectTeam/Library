@@ -1,4 +1,13 @@
 <?php
+     session_start();
+     if(!isset($_SESSION["username"])){
+ 
+     ?>
+     <script type="text/javascript">
+         window.location="/Library/index.html";
+     </script>
+     <?php
+     }
     include "header.php";
     include "connection.php";
 ?>
@@ -10,7 +19,7 @@
                     <div class="title_left">
                         <h3></h3>
                     </div>
-
+                    <!--
                     <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                             <div class="input-group">
@@ -21,6 +30,7 @@
                             </div>
                         </div>
                     </div>
+-->
                 </div>
 
                 <div class="clearfix"></div>
@@ -52,7 +62,62 @@
                           {
                               $i=$i+1;
                               echo "<td>";
-                              ?>   <img src="../librarian/<?php echo $row["img"] ; ?>" height="100" width="100"   ><?php
+                              ?>   <img alt=" <?php echo $row["name"] ; ?>" id="myImg<?php echo $i ; ?>" src="../librarian/<?php echo $row["img"] ; ?>" height="100" width="100" style="cursor: pointer"  >
+                              
+                              <!-- The Modal -->
+                            <div id="myModal<?php echo $i ; ?>" class="modal">
+
+                            <!-- The Close Button -->
+                            <span class="close<?php echo $i ; ?>" style=" position: absolute;
+                                                                            top: 35px;
+                                                                            right: 85px;
+                                                                            color: #f1f1f1;
+                                                                            font-size: 40px;
+                                                                            font-weight: bold;
+                                                                            transition: 0.3s;
+                                                                            cursor: pointer">&times;</span>
+
+                            <!-- Modal Content (The Image) -->
+                            <img class="modal-content" id="img01<?php echo $i ; ?>" style="margin: auto;
+                                                                                    display: block;
+                                                                                    width: 80%;
+                                                                                    max-width: 700px;">
+
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption<?php echo $i ; ?>" style="margin: auto;
+                                                                        font-size: 30px;
+                                                                        display: block;
+                                                                        width: 80%;
+                                                                        max-width: 700px;
+                                                                        text-align: center;
+                                                                        color: #ccc;
+                                                                        padding: 10px 0;
+                                                                        height: 150px;"></div>
+                            </div>
+                            <script type="text/javascript">
+                            var modal = document.getElementById("myModal<?php echo $i ; ?>");
+
+                            // Get the image and insert it inside the modal - use its "alt" text as a caption
+                            var img = document.getElementById("myImg<?php echo $i ; ?>");
+                            var modalImg = document.getElementById("img01<?php echo $i ; ?>");
+                            var captionText = document.getElementById("caption<?php echo $i ; ?>");
+                            img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                            }
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close<?php echo $i ; ?>")[0];
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                            modal.style.display = "none";
+                            }
+
+                            </script>
+                            
+                              <?php
                               echo "<br>";
                               echo "<b>" . $row["name"] . "</b>";
                               echo "<br>";
@@ -83,7 +148,64 @@
                           {
                               $i=$i+1;
                               echo "<td>";
-                              ?>   <img src="../librarian/<?php echo $row["img"] ; ?>" height="100" width="100"   ><?php
+                              ?>   <img alt=" <?php echo $row["name"] ; ?>" id="myImg<?php echo $i ; ?>" src="../librarian/<?php echo $row["img"] ; ?>" height="100" width="100"  style="cursor: pointer" >
+                              <!-- The Modal -->
+                            <div id="myModal<?php echo $i ; ?>" class="modal">
+
+                            <!-- The Close Button -->
+                            <span class="close<?php echo $i ; ?>" style=" position: absolute;
+                                                                            top: 35px;
+                                                                            right: 85px;
+                                                                            color: #f1f1f1;
+                                                                            font-size: 40px;
+                                                                            font-weight: bold;
+                                                                            transition: 0.3s;
+                                                                            cursor: pointer"
+                                                                            
+                                                                            >&times;</span>
+
+                            <!-- Modal Content (The Image) -->
+                            <img class="modal-content" id="img01<?php echo $i ; ?>" style="margin: auto;
+                                                                                    display: block;
+                                                                                    width: 80%;
+                                                                                    max-width: 700px;">
+
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption<?php echo $i ; ?>" style="margin: auto;
+                                                                    font-size: 30px;
+                                                                    display: block;
+                                                                    width: 80%;
+                                                                    max-width: 700px;
+                                                                    text-align: center;
+                                                                    color: #ccc;
+                                                                    padding: 10px 0;
+                                                                    height: 150px;"></div>
+                            </div>
+                            <script type="text/javascript">
+                            var modal = document.getElementById("myModal<?php echo $i ; ?>");
+
+                            // Get the image and insert it inside the modal - use its "alt" text as a caption
+                            var img = document.getElementById("myImg<?php echo $i ; ?>");
+                            var modalImg = document.getElementById("img01<?php echo $i ; ?>");
+                            var captionText = document.getElementById("caption<?php echo $i ; ?>");
+                            img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                            }
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close<?php echo $i ; ?>")[0];
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                            modal.style.display = "none";
+                            }
+
+                            </script>
+
+
+                              <?php
                               echo "<br>";
                               echo "<b>" . $row["name"] . "</b>";
                               echo "<br>";
