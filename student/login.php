@@ -43,7 +43,7 @@
           ?>
             <script type="text/javascript">
               
-              window.location="/Library/student/dashboard.php"
+              window.location="/Library/student/issued_books.php"
 
             </script>
           <?php
