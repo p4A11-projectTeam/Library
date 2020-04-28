@@ -16,11 +16,16 @@ $a  = date("d/m/Y");
 
 $res=mysqli_query($db,"SELECT * from `issue_books` where `issueid`='$id'");
 while($row=mysqli_fetch_array($res)){
-    $return_date=$row["return_date"];
+    $issue_date=$row["issue_date"];
     $books_name=$row["books_name"];
     $edition=$row["edition"];
 }
-if($return_date < $a)
+$return_date=date("y/m/d");
+mysqli_query($db,"UPDATE `issue_books` SET `return_date`= '$return_date' WHERE `issueid`='$id'");
+
+$rdate=date('Y/m/d', strtotime($issue_date. ' + 15 days')); 
+
+if($rdate < $a)
 {
     ?>
     <div class="right_col" role="main">
@@ -30,7 +35,7 @@ if($return_date < $a)
                         <div class="x_panel">
                         <div class="x_content">
     <div class="alert alert-danger col-lg-6 col-lg-push-3">
-    <strong style="...">Due date has passed,Pay Fine :(</strong> 
+    <strong style="...">Due date has passed, Pay Fine :(</strong> 
                                                                 </div>
                                                                 </div>
             </div>
@@ -39,7 +44,9 @@ if($return_date < $a)
         </div>
         </div>
                                                                 
-
+        
+   
+   
     <?php
 }
 
@@ -48,6 +55,7 @@ else{
     
     
 mysqli_query($db,"UPDATE `books` SET `availability`=`availability`+1 WHERE `name`='$books_name' and `edition`='$edition'");
+
     ?>
    
     <script type="text/javascript">
