@@ -246,11 +246,11 @@ include "connection.php";
                                                             $usn=$_SESSION['usn'];
                                                             $books_name=$_POST['books_name'];
                                                             $issue_date=date("y/m/d");
-                                                            $rdate = date("y/m/d", strtotime("+15 days"));
+                                                           
                                                             $edition=$_POST['edition'];
                                                             $student_name=$_POST['student_name'];
                                                             
-                                                            $query="INSERT INTO `issue_books`(`issueid`, `usn`, `books_name`, `issue_date`, `return_date`, `edition`, `student_name`) VALUES (' ','$usn','$books_name','$issue_date',' $rdate','$edition','$student_name')";
+                                                            $query="INSERT INTO `issue_books`(`issueid`, `usn`, `books_name`, `issue_date`, `return_date`, `edition`, `student_name`) VALUES (' ','$usn','$books_name','$issue_date',' ','$edition','$student_name')";
                                                           $result= mysqli_query($db,$query);
                                                           mysqli_query($db,"UPDATE `books` SET `availability`=`availability`-1 where `name`='$books_name' and `edition`='$edition'");
                                                         
