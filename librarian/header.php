@@ -69,13 +69,13 @@
                             <li><a href="/Library/librarian/display_books.php"><i class="fa fa-desktop"></i> Display Books </a>
 
                             </li>
-                            <li><a href="/Library/librarian/issue_books.php"><i class="fa fa-table"></i> Issue Books </a>
+                            <li><a href="/Library/librarian/issue_books.php"><i class="fa fa-indent"></i> Issue Books </a>
 
                             </li>
-                            <li><a href="/Library/librarian/return_books.php"><i class="fa fa-bar-chart-o"></i> Return Books </a>
+                            <li><a href="/Library/librarian/return_books.php"><i class="fa fa-level-down"></i> Return Books </a>
 
                             </li>
-                            <li><a href="/Library/librarian/books_details_with_student.php"><i class="fa fa-bar-chart-o"></i>Books with all info </a>
+                            <li><a href="/Library/librarian/books_details_with_student.php"><i class="fa fa-info-circle"></i>Books with all info </a>
 
                             </li>
                             <li><a href="/Library/librarian/send_notification.php"><i class="fa fa-mail-forward"></i> Send Message </a>
