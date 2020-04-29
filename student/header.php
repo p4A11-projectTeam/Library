@@ -66,15 +66,9 @@
                             </li>
                             <li><a href="search_books.php"><i class="fa fa-edit"></i> Search Books </a>
                             </li>
-                            <li><a><i class="fa fa-desktop"></i> UI Elements </span></a>
-
+                            <li><a href="send_msg_to_admin.php"><i class="fa fa-mail-forward"></i> Send Message to Admin </span></a>
                             </li>
-                            <li><a><i class="fa fa-table"></i> Tables </a>
-
-                            </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation </a>
-
-                            </li>
+                            
 
                         </ul>
                     </div>
