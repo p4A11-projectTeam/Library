@@ -1,3 +1,14 @@
+<?php
+    // session_start();
+    include "connection.php";
+    $tot = 0;
+    //echo $_SESSION["username"];
+    $result = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[librarian]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
+    $tot = mysqli_num_rows($result);
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,9 +113,9 @@
 
                         <li role="presentation" class="dropdown">
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                               aria-expanded="false">
+                               aria-expanded="false" onclick="window.location='/Library/librarian/msg_from_student.php';">
                                 <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green">6</span>
+                                <span class="badge bg-green" onclick="window.location='/Library/librarian/msg_from_student.php';"><?php  echo $tot; ?></span>
                             </a>
 
                         </li>

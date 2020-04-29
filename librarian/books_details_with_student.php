@@ -1,5 +1,14 @@
 <?php
-    session_start();
+     session_start();
+     if(!isset($_SESSION["librarian"])){
+ 
+         ?>
+         <script type="text/javascript">
+             window.location="/Library/index.html";
+         </script>
+         <?php
+ 
+     }
     include "connection.php";
     include "header.php";
 ?>
@@ -53,7 +62,13 @@
                               echo "<br>";
                               echo "<b>" . "Available:". $row["availability"] . "</b>";
                               echo "<br>";
-                              ?> <a href="all_student_of_this_book.php?books_name=<?php echo $row["name"]; ?>" style="color:red">Student Record of this book</a> <?php
+                              echo "<br>";
+                              ?> <a href="all_student_of_this_book.php?books_name=<?php echo $row["name"]; ?>" class="bg-warning" style="padding-top: 8px; 
+                                                                                                                                    padding-bottom: 8px; 
+                                                                                                                                    padding-left: 2px;
+                                                                                                                                    padding-right: 3px; 
+                                                                                                                                    margin-top:0px;
+                                                                                                                                    border-color:black;">Student Record of this book</a> <?php
                               echo "</td>";
                               if($i==6)
                               {
