@@ -67,6 +67,29 @@
                                 
                             </form>
                             </div>
+                            <table class="table table-bordered">
+                                    <tr>
+                                    <th>Title</th>
+                                    <th>Message</th>
+                                    </tr>
+
+                                    <?php
+                                        $res = mysqli_query($db, "SELECT * FROM `messages` WHERE dusername='$_SESSION[librarian]' order by id desc ");
+                                        while($row=mysqli_fetch_array($res)){
+                                            $fullname="";
+                                            $res1 = mysqli_query($db, "SELECT * FROM `student` WHERE `username`='$row[susername]' ");
+                                            while($row1=mysqli_fetch_array($res1)){
+                                                $fullname = $row1["username"];
+                                            }
+                                            
+                                            
+                                            echo "<tr>";
+                                            echo "<td>"; echo $row["title"]; echo "</td>";
+                                            echo "<td>"; echo $row["msg"]; echo "</td>";
+                                            echo "</tr>";
+                                        }
+                                    ?>
+                                </table>
                         </div>
                     </div>
                 </div>
