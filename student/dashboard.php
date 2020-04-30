@@ -26,7 +26,7 @@
    $rm = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[username]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
    $rb = mysqli_query($db, "SELECT * FROM `books` ") or die("Error: " . mysqli_error($db));
    $rf = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[username]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
-   $rsm = mysqli_query($db, "SELECT * FROM `messages` WHERE `susername` = '$_SESSION[username]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
+   $rsm = mysqli_query($db, "SELECT * FROM `messages` WHERE `susername` = '$_SESSION[username]' ") or die("Error: " . mysqli_error($db));
    $rib=mysqli_query($db,"SELECT * FROM `issue_books` WHERE usn='$_SESSION[usn]'  and return_status='no';") or die("Error: " . mysqli_error($db));
 
    $nm = mysqli_num_rows($rm);
