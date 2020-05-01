@@ -1,3 +1,3 @@
 # Library Management System
-
-## by Anusree K Manoj, Shikha N, Guru Nanma P
+## 4th sem project
+### Anusree K Manoj, Shikha N, Guru Nanma P
