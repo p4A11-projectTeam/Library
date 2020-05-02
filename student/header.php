@@ -44,7 +44,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                        <img src="https://i.pinimg.com/474x/82/dc/c2/82dcc2802f24719351ea09ab20c8c66e.jpg" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
@@ -67,6 +67,8 @@
                             <li><a href="/Library/student/issued_books.php"><i class="fa fa-bookmark"></i> My issued books </a>
                             </li>
                             <li><a href="search_books.php"><i class="fa fa-edit"></i> Search Books </a>
+                            </li>
+                            <li><a href="fines.php"><i class="fa fa-money"></i> Fine Section </a>
                             </li>
                             <li><a href="send_msg_to_admin.php"><i class="fa fa-mail-forward"></i> Send Message to Admin </span></a>
                             </li>
@@ -93,7 +95,7 @@
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="images/img.jpg" alt=""><?php echo $_SESSION["username"] ?>
+                                <img src="https://i.pinimg.com/474x/82/dc/c2/82dcc2802f24719351ea09ab20c8c66e.jpg" alt=""><?php echo $_SESSION["username"] ?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">

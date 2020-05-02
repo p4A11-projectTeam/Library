@@ -77,7 +77,11 @@
                             </li>
                             <li><a href="/Library/librarian/books_details_with_student.php"><i class="fa fa-info-circle"></i>Books with all info </a>
 
+
                             </li>
+                            <li><a href="/Library/librarian/fine.php"><i class="fa fa-money"></i>Manage Fines</a>
+
+</li>
                             <li><a href="/Library/librarian/send_notification.php"><i class="fa fa-mail-forward"></i> Send Message </a>
 
                             </li>

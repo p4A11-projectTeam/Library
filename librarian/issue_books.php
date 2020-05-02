@@ -132,7 +132,7 @@ include "connection.php";
                                                          </div>
                                                              <select name="books_name"  class="form-control selectpicker">
                                                                  <?php
-                                                                 $res=mysqli_query($db,"select  name  from books");
+                                                                 $res=mysqli_query($db,"select  distinct name  from books");
                                                                  while($row=mysqli_fetch_array($res))
                                                                  {
                                                                     
