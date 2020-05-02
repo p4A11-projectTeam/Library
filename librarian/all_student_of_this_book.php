@@ -35,7 +35,7 @@
                             </div>
                             <div class="x_content">
                             <?php
-                                    $res=mysqli_query($db,"SELECT * FROM `issue_books` WHERE `books_name`='$_GET[books_name]' ");
+                                    $res=mysqli_query($db,"SELECT * FROM `issue_books` WHERE `books_name`='$_GET[books_name]'and `return_status`= 'no' ");
                                     echo "<table class='table table-bordered'>";
                                     echo "<tr>";
                                     echo "<th>"; echo "Student Name"; echo "</th>";

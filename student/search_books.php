@@ -121,8 +121,10 @@
                               echo "<br>";
                               echo "<b>" . $row["name"] . "</b>";
                               echo "<br>";
-                              echo "<br>";
+                             
                               echo "<b>" . "edition:". $row["edition"] . "</b>";
+                              echo "<br>";
+                             
                               echo "<b>" . "available:". $row["availability"] . "</b>";
                               echo "<br>";
                               
