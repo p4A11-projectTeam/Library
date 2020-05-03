@@ -12,7 +12,7 @@ include "connection.php";
 include "header.php";
 
 $id=$_GET["id"];
-$a  = date("d/m/Y");
+$a  = date("Y-m-d");
 
 $res=mysqli_query($db,"SELECT * from `issue_books` where `issueid`='$id'");
 while($row=mysqli_fetch_array($res)){
@@ -20,13 +20,15 @@ while($row=mysqli_fetch_array($res)){
     $books_name=$row["books_name"];
     $edition=$row["edition"];
 }
-$return_date=date("y/m/d");
-mysqli_query($db,"UPDATE `issue_books` SET `return_date`= '$return_date' WHERE `issueid`='$id'");
+$return_date=date("Y-m-d");
 
-$rdate=date('Y/m/d', strtotime($issue_date. ' + 15 days')); 
+
+$rdate=date('Y-m-d', strtotime($issue_date. ' + 15 days')); 
 
 if($rdate < $a)
 {
+    
+
     ?>
     <div class="right_col" role="main">
             <div class="">
@@ -35,7 +37,7 @@ if($rdate < $a)
                         <div class="x_panel">
                         <div class="x_content">
     <div class="alert alert-danger col-lg-6 col-lg-push-3">
-    <strong style="...">Due date has passed, Pay Fine :(</strong> 
+    <h4 style="text-align:center">Due date has passed, Pay Fine :(</h4> 
                                                                 </div>
                                                                 </div>
             </div>
@@ -51,6 +53,7 @@ if($rdate < $a)
 }
 
 else{
+    mysqli_query($db,"UPDATE `issue_books` SET `return_date`= '$return_date' WHERE `issueid`='$id'");
     $res=mysqli_query($db,"UPDATE `issue_books` SET `return_status`= 'yes' WHERE `issueid`='$id'");
     
     

@@ -25,10 +25,10 @@
 
    $rm = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[username]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
    $rb = mysqli_query($db, "SELECT * FROM `books` ") or die("Error: " . mysqli_error($db));
-   $rf = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[username]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
+   $rf = mysqli_query($db, "SELECT * FROM `fine` WHERE usn='$_SESSION[usn]' and status='not paid'; ") or die("Error: " . mysqli_error($db));
    $rsm = mysqli_query($db, "SELECT * FROM `messages` WHERE `susername` = '$_SESSION[username]' ") or die("Error: " . mysqli_error($db));
    $rib=mysqli_query($db,"SELECT * FROM `issue_books` WHERE usn='$_SESSION[usn]'  and return_status='no';") or die("Error: " . mysqli_error($db));
-
+   
    $nm = mysqli_num_rows($rm);
    $nb = mysqli_num_rows($rb);
    $nf = mysqli_num_rows($rf);
@@ -96,7 +96,7 @@
                                             </a></div>   
                                         </div>  
                                         <div class="col-sm-4">
-                                            <div class="btn-lg btn-warning"><a href="fine.php" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg btn-warning"><a href="fines.php" style="all:unset;cursor:pointer">
                                                 <div class="row ">
                                                     <div class="col-sm-7">
                                                         <div class="h1" >
