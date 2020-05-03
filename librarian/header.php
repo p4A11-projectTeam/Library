@@ -60,6 +60,8 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
+                        <li><a href="/Library/librarian/admin_dashboard.php"><i class="fa fa-home"></i>Dashboard </a>
+                            </li>
                             <li><a href="/Library/librarian/student_info.php"><i class="fa fa-home"></i> All student info </a>
 
                             </li>

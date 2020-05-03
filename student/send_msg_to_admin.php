@@ -74,7 +74,7 @@
                                     </tr>
 
                                     <?php
-                                        $res = mysqli_query($db, "SELECT * FROM `messages` WHERE dusername='$_SESSION[librarian]' order by id desc ");
+                                        $res = mysqli_query($db, "SELECT * FROM `messages` WHERE dusername='admin' order by id desc ");
                                         while($row=mysqli_fetch_array($res)){
                                             $fullname="";
                                             $res1 = mysqli_query($db, "SELECT * FROM `student` WHERE `username`='$row[susername]' ");
@@ -99,7 +99,7 @@
         <!--rand-->
 <?php
     if(isset($_POST["submit1"])){
-        mysqli_query($db, "insert into messages values('','$_SESSION[username]','$_SESSION[librarian]','$_POST[title]','$_POST[msg]','n')")
+        mysqli_query($db, "insert into messages values('','$_SESSION[username]','admin','$_POST[title]','$_POST[msg]','n')")
     ?>
     <script type="text/javascript">
         alert("message sent successfully!");
