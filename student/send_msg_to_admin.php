@@ -99,7 +99,7 @@
         <!--rand-->
 <?php
     if(isset($_POST["submit1"])){
-        mysqli_query($db, "insert into messages values('','$_SESSION[username]','$_SESSION[librarian]','$_POST[title]','$_POST[msg]','n')")
+        mysqli_query($db, "insert into messages values('','$_SESSION[username]','admin','$_POST[title]','$_POST[msg]','n')")
     ?>
     <script type="text/javascript">
         alert("message sent successfully!");
