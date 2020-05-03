@@ -23,7 +23,7 @@
 
    $rm = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[librarian]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
    $rb = mysqli_query($db, "SELECT * FROM `books` ") or die("Error: " . mysqli_error($db));
-   $rf = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[librarian]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
+   $rf = mysqli_query($db, "SELECT * FROM `fine` WHERE status='no';") or die("Error: " . mysqli_error($db));
    $rsm = mysqli_query($db, "SELECT * FROM `messages` WHERE `susername` = '$_SESSION[librarian]' ") or die("Error: " . mysqli_error($db));
    $rib=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='no';") or die("Error: " . mysqli_error($db));
    $rstud=mysqli_query($db, "SELECT * FROM `student` ") or die("Error: " . mysqli_error($db));
@@ -107,7 +107,7 @@
                                                             <?php  echo $nf; ?>
                                                         </div>
                                                         <div>
-                                                            Fine Collected
+                                                            Fine Due
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
@@ -139,7 +139,7 @@
                                             </a></div>    
                                         </div>  
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-danger"><a href="send_msg_to_admin.php" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg  btn-danger"><a href="send_notification.php" style="all:unset;cursor:pointer">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">

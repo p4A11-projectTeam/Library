@@ -133,8 +133,12 @@
                       <input type="text" name="username" class="inp" placeholder="Username" required autocomplete="off"/>
                       <input type="email" name="email" class="inp" placeholder="Email Address" required autocomplete="off"/>
                       <input type="text" name="usn" class="inp" placeholder="USN" required autocomplete="off"/>
-                      <input type="tel" name="contact" class="inp" placeholder="Phone Number" required autocomplete="off"/>
                       <input type="password" name="password" class="inp" placeholder="Password" required autocomplete="off"/>
+                      <span class="btn btn-secondary inp" style="margin-bottom: 15px !important;
+    display: block;width:60%;
+    align-items: center;
+    margin: 10px auto !important;">Which is your favorite book?</span>
+                      <input type="text" name="answer" class="inp" placeholder="Answer" required autocomplete="off"/>
                     <button type="submit" name="submit" class="button button-block spacee" >Get Started</button>
                     <p class="yet">Already have an account? <a class="forgot" id="loginButton">Login</a></p>
                   </form>
@@ -145,11 +149,78 @@
                     <form action="/Library/student/login.php" method="post">
                       <input type="text" name="username" class="inp1" placeholder="Username" required autocomplete="off"/>
                       <input type="password" name="password" class="inp2" placeholder="Password" required autocomplete="off"/>
-                    <p><a class="forgot yet" href="#">Forgot Password?</a></p>
+                    <p><a class="forgot yet" id="myBtn" href="#">Forgot Password?</a></p>
                     <button type="submit" name="submit" class="button button-block">Log In</button>
                     <p class="yet">Don't have an account yet? <a class="forgot" id="signupButton">Sign Up</a></p>
                     
                     </form>
+<!--Modal for forgot password-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal" style="display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 100;
+top: 200;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4);">
+
+  <!-- Modal content -->
+  <div class="modal-content" style=" background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 10px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */">
+    <span class="close" style="color: #aaa;
+    float: right;padding-left:96%;
+    font-size: 28px; cursor:pointer;
+    font-weight: bold;">&times;</span>
+    <form action="forgot_pass.php" method="post">
+    <input type="text" name="email" class="inp1" placeholder="Email" required autocomplete="off"/>
+    <span class="btn btn-secondary" style="margin-bottom: 15px !important;
+    display: block;width:60%;
+    align-items: center;
+    margin: 10px auto !important; font-size:15px;">Which is your favorite book?</span>
+    <input type="text" name="answer" class="inp1" placeholder="Answer" required autocomplete="off"/>
+    <button type="submit" name="submit" class="button button-block spacee" >Show password</button>
+
+    </form>
+  </div>
+
+</div>
+
+<script>
+  var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+                    
                   </div>
 
 
