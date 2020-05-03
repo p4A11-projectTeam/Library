@@ -42,6 +42,22 @@
                             </div>
                             <div class="x_content">
                             <?php
+                            $a  = date("Y-m-d");
+                            $x=mysqli_query($db," SELECT * FROM `issue_books` where `return_status`='no' ");
+                            
+                            while($row=mysqli_fetch_array($x))
+                            {
+                                $issueid=$row["issueid"];
+                                $usn=$row["usn"];
+                                $books_name=$row["books_name"];
+                                $edition=$row["edition"];
+                                $issue_date=$row["issue_date"];
+                                $ddate=date('Y-m-d', strtotime($issue_date. ' + 15 days'));
+                                if($ddate < $a){
+                               mysqli_query($db,"INSERT INTO `fine`(`issue_id`,`usn`,`book_name`,`edition`,`issue_date`,`return_date`,`amount`) VALUES('$issueid','$usn','$books_name','$edition','$issue_date',' ',' ')");
+                                }
+
+                            }
                             $res3=mysqli_query($db,"SELECT  `usn` FROM `student` where username='$_SESSION[username]' ");
                             while($row3=mysqli_fetch_array($res3))
                             {
