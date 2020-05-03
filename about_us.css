@@ -1,0 +1,206 @@
+
+  body{
+    margin: 0;
+    padding: 70px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    background-image: linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,rgb(218, 113, 183),#8e44ad);
+    background-size: 400% 400%;
+    animation: bganimation 12s infinite;
+    font-size: 15pt;
+  }
+  
+  
+  @keyframes bganimation {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .f1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18pt;
+  }
+  #bs{
+      text-align: center;
+  }
+  
+  
+  
+ 
+  .about-section {
+    padding: 30px;
+    
+    border-style: outset;
+  border: gray;
+    /*background-image: linear-gradient(rgb(116, 238, 197));*/
+    color:rgb(20, 19, 19);
+    margin-right: 15px;
+    margin-left: 15px;
+    
+    
+    
+  }
+  .lines{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 19pt;
+    line-height: 36px;
+    text-align: justify;
+    
+      }
+  
+  .container1 {
+    padding: 0 16px;
+  }
+  
+  
+  .title {
+    color: grey;
+    
+  }
+  
+  .card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 160px 110px 60px;
+    grid-template-areas: "image" "text" "stats";
+  
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    
+  
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+  }
+  .card-image {
+    
+    background-image: url("https://vignette.wikia.nocookie.net/naruto/images/a/a5/Sakura_Part_III.png/revision/latest/scale-to-width-down/340?cb=20170726100410");
+    background-repeat: no-repeat;
+    background-position: center;
+ background-size: contain;
+  }
+  
+  .card-text {
+    grid-area: text;
+    margin: 25px;
+  }
+  
+  .card-text p {
+    color: grey;
+    font-size:15px;
+    font-weight: 300;
+  }
+  .card-text h2 {
+    margin-top:5px;
+    font-size:20px;
+  }
+  .card-stats {
+    grid-area: stats; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(6, 238, 45);
+  }
+  .card-stats .stat {
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+  }
+  .card-stats .border {
+    border-left: 1px solid rgb(172, 26, 87);
+    border-right: 1px solid rgb(172, 26, 87);
+  }
+  .card-stats .value{
+    font-size:22px;
+    font-weight: 500;
+  }
+  .card-stats .value sup{
+    font-size:12px;
+  }
+  .card-stats .type{
+    font-size:11px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  
+  /*card2*/
+  .card-image.card2 {
+    background: url("https://i.pinimg.com/originals/b1/9a/d1/b19ad11b94a44c2331bcbd6ee926fa47.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+ background-size: contain;
+  }
+  
+  .card-stats.card2 .border {
+    border-left: 1px solid rgb(185, 67, 20);
+    border-right: 1px solid rgb(185, 67, 20);
+  }
+  .card-stats.card2 {
+    background: rgb(241, 119, 186);
+  }
+  /*card3*/
+  .card-image.card3 {
+    background-image: url("https://avatarfiles.alphacoders.com/158/158221.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+   
+  }
+  
+  .card-stats.card3 .border {
+    border-left: 1px solid rgb(14, 122, 50);
+    border-right: 1px solid rgb(14, 122, 50);
+  }
+  .card-stats.card3 {
+    background: rgb(218, 221, 9);
+  }
+  .fa-facebook {
+    color: #3B5998;
+    
+  }
+  
+  .fa-instagram{
+      color: rgb(88, 2, 53);
+    
+  }
+  
+  .fa-envelope{
+    color: #dd4b39;
+    
+  }
+  .center{
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+
+  
+  
