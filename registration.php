@@ -30,7 +30,7 @@
         }
         if($count==0)
         {
-          mysqli_query($db,"INSERT INTO `student`(`first`, `last`, `username`, `email`, `usn`, `contact`, `password`,`status`) VALUES ('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[email]', '$_POST[usn]', '$_POST[contact]', '$_POST[password]','no');");
+          mysqli_query($db,"INSERT INTO `student`(`first`, `last`, `username`, `email`, `usn`, `password`, `status`, `answer` ) VALUES ('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[email]', '$_POST[usn]', '$_POST[password]','no', '$_POST[answer]');");
         ?>
           <script type="text/javascript">
 
