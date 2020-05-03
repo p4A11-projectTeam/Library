@@ -98,7 +98,7 @@
 
 
                             <div class="alert alert-danger col-lg-6 col-lg-push-3">
-                            <h4 style="text-align:center">No Fines Available</h4> 
+                            <h4 style="text-align:center">No Fines Due</h4> 
                                                                                         </div>
                                                                                        
                                                             <?php
