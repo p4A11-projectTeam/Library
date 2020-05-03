@@ -74,7 +74,7 @@
                                     </tr>
 
                                     <?php
-                                        $res = mysqli_query($db, "SELECT * FROM `messages` WHERE dusername='$_SESSION[librarian]' order by id desc ");
+                                        $res = mysqli_query($db, "SELECT * FROM `messages` WHERE dusername='admin' order by id desc ");
                                         while($row=mysqli_fetch_array($res)){
                                             $fullname="";
                                             $res1 = mysqli_query($db, "SELECT * FROM `student` WHERE `username`='$row[susername]' ");
