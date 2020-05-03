@@ -3,7 +3,7 @@
     margin: 0;
     padding: 70px;
     font-family: "Arial Black", Gadget, sans-serif;
-    background-image: linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,rgb(218, 113, 183),#8e44ad);
+    background-image: linear-gradient(125deg,#2c3e50,#27ae60,#3198dd,rgb(218, 113, 183),#8e44ad);
     background-size: 400% 400%;
     animation: bganimation 12s infinite;
     font-size: 15pt;
@@ -59,6 +59,7 @@
     font-size: 19pt;
     line-height: 36px;
     text-align: justify;
+    font-weight:bold;
     
       }
   
