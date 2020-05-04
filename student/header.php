@@ -68,6 +68,8 @@
                             </li>
                             <li><a href="search_books.php"><i class="fa fa-edit"></i> Search Books </a>
                             </li>
+                            <li><a href="reqbooks.php"><i class="fa fa-plus"></i> Request Books </a>
+                            </li>
                             <li><a href="fines.php"><i class="fa fa-money"></i> Fine Section </a>
                             </li>
                             <li><a href="send_msg_to_admin.php"><i class="fa fa-mail-forward"></i> Send Message to Admin </span></a>
