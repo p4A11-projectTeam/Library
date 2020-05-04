@@ -72,7 +72,8 @@
 
                             </li>
                             <li><a href="/Library/librarian/issue_books.php"><i class="fa fa-indent"></i> Issue Books </a>
-
+                            </li>
+                            <li><a href="/Library/librarian/requestedbooks.php"><i class="fa fa-plus"></i> Requested Books </a>
                             </li>
                             <li><a href="/Library/librarian/return_books.php"><i class="fa fa-level-down"></i> Return Books </a>
 
