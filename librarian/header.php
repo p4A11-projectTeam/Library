@@ -62,7 +62,7 @@
                         <ul class="nav side-menu">
                         <li><a href="/Library/librarian/admin_dashboard.php"><i class="fa fa-home"></i>Dashboard </a>
                             </li>
-                            <li><a href="/Library/librarian/student_info.php"><i class="fa fa-home"></i> All student info </a>
+                            <li><a href="/Library/librarian/student_info.php"><i class="fa fa-user"></i> All student info </a>
 
                             </li>
                             <li><a href="/Library/librarian/add_books.php"><i class="fa fa-edit"></i> Add Books </a>

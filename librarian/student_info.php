@@ -20,16 +20,7 @@
                         <h3></h3>
                     </div>
 
-                    <div class="title_right">
-                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <div class="clearfix"></div>
@@ -51,7 +42,6 @@
                                     echo "<th>"; echo "Username"; echo "</th>";
                                     echo "<th>"; echo "Email"; echo "</th>";
                                     echo "<th>"; echo "USN"; echo "</th>";
-                                    echo "<th>"; echo "Contact"; echo "</th>";
                                     echo "<th>"; echo "Status"; echo "</th>";
                                     echo "<th>"; echo "Approve"; echo "</th>";
                                     echo "<th>"; echo "Not Approve"; echo "</th>";
@@ -63,7 +53,6 @@
                                         echo "<td>"; echo $row["username"]; echo "</td>";
                                         echo "<td>"; echo $row["email"]; echo "</td>";
                                         echo "<td>"; echo $row["usn"]; echo "</td>";
-                                        echo "<td>"; echo $row["contact"]; echo "</td>";                                        
                                         echo "<td>"; echo $row["status"]; echo "</td>";
                                         echo "<td class='bg-info'>"; ?> <a href="approve.php?id=<?php echo $row["id"];?>">Approve</a> <?php echo "</td>";
                                         echo "<td class='bg-warning'>"; ?> <a href="notapprove.php?id=<?php echo $row["id"];?>">Not Approve</a> <?php echo "</td>";
