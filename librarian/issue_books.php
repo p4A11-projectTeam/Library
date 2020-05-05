@@ -160,8 +160,8 @@ include "connection.php";
                                        
                                                     <tr>
                                                      <td>
-                                                     <div class="text-left col-md-4">  
-                                                     <h5> Enter the edition:</h5>
+                                                     <div class="text-left col-md-9">  
+                                                     <h5> Enter the edition (<a href="books_details_with_student.php"> Check The Edition </a>)</h5>
                                                      </div>   
                                                      <input type="number" class="form-control" placeholder="Book edition" name="edition"  required="">
                                                      </td>
