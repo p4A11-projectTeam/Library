@@ -122,7 +122,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-muted"><a href="#" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg  btn-muted" ><a href="#" style="all:unset;cursor:pointer">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">
@@ -139,14 +139,14 @@
                                             </a></div>    
                                         </div>  
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-danger"><a href="send_msg_to_admin.php" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg  btn-danger"><a href="send_notification.php" style="all:unset;cursor:pointer">
                                                 <div class="row">
                                                     <div class="col-sm-7">
-                                                        <div class="h1">
+                                                        <div class="h1" style="color:#00000000">
                                                              <?php  echo $sm; ?>
                                                         </div>
                                                         <div>
-                                                            Sent Messages
+                                                            Send Messages
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
@@ -180,7 +180,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-primary" style="background-color:#4ad983 !important;"><a href="#" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg  btn-primary" style="background-color:#4ad983 !important;"><a href="#" style="all:unset;cursor:default">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">
@@ -197,7 +197,7 @@
                                             </a></div>    
                                         </div>
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-primary" style="background-color:#f01818 !important;"><a href="#" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg  btn-primary" style="background-color:#f01818 !important;"><a href="#" style="all:unset;cursor:default">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">
