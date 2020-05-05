@@ -30,8 +30,8 @@
           
         ?>
           <script type="text/javascript">
-           alert("Email and password doesn't match");
-           window.location="/Library/index.html"
+           alert("Email and password doesn't match or your membership has been revoked. Please contact for further details");
+           window.location="/Library/feedback.html"
           </script>
         <?php
         }

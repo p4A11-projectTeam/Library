@@ -27,7 +27,7 @@
    $rsm = mysqli_query($db, "SELECT * FROM `messages` WHERE `susername` = '$_SESSION[librarian]' ") or die("Error: " . mysqli_error($db));
    $rib=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='no';") or die("Error: " . mysqli_error($db));
    $rstud=mysqli_query($db, "SELECT * FROM `student` ") or die("Error: " . mysqli_error($db));
-   $rretbks=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='yes';") or die("Error: " . mysqli_error($db));
+   $rreqbks=mysqli_query($db,"SELECT * FROM `request_books` WHERE status='no';") or die("Error: " . mysqli_error($db));
    $rnotret=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='no';") or die("Error: " . mysqli_error($db));
 
    $nm = mysqli_num_rows($rm);
@@ -36,7 +36,7 @@
    $sm = mysqli_num_rows($rsm);
    $ib = mysqli_num_rows($rib);
    $ns = mysqli_num_rows($rstud);
-   $retbks = mysqli_num_rows($rretbks);
+   $reqbks = mysqli_num_rows($rreqbks);
    $notret = mysqli_num_rows($rnotret);
 
    
@@ -180,18 +180,18 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-primary" style="background-color:#4ad983 !important;"><a href="#" style="all:unset;cursor:default">
+                                            <div class="btn-lg  btn-primary" style="background-color:#4ad983 !important;"><a href="requestedbooks.php" style="all:unset;cursor:pointer">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">
-                                                            <?php  echo $retbks; ?>
+                                                            <?php  echo $reqbks; ?>
                                                         </div>
                                                         <div>
-                                                            Returned
+                                                            Requests Pending
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <i class="fa fa-check" aria-hidden="true" style="font-size:80px"></i>
+                                                        <i class="fa fa-plus" aria-hidden="true" style="font-size:80px"></i>
                                                     </div>
                                                 </div>
                                             </a></div>    
