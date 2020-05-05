@@ -33,9 +33,12 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <form name="form1" action="" method="post" class="col-lg-6" enctype="multipart/form-data">
+                            <div class="container container-table">
+		                    <div class="row vertical-center-row">
+			                <div class="text-center col-md-6 col-md-offset-3">
+                                <form name="form1" action="" method="post" class="col-lg-12" enctype="multipart/form-data">
 
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered table-responsive" >
                                         <tr>
                                             <td><input type="number" class="form-control" placeholder="ISBN" name="isbn" required=""></td>
                                         </tr>
@@ -57,14 +60,17 @@
                                         </tr>
                                         <tr>
                                             
-                                            <td>Book image<input type="file" id="img" name="img" accept="image/*"></td>
+                                            <td><div class="text-left col-md-3">Book image</div><input type="file" id="img" name="img" accept="image/*"></td>
                                         </tr>
                                         <tr>
-                                            <td><input type="submit" name="submit1" value="Add" class="btn btn-default submit"></td>
+                                            <td><input type="submit" name="submit1" value="Add" class="btn btn-dark btn-lg btn-block submit"></td>
                                         </tr>
                                         
                                     </table>
                                 </form>
+                                </div>
+                                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
