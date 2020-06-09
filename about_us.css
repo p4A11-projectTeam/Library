@@ -80,8 +80,9 @@
   
   .card {
     display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 160px 110px 60px;
+    padding-top:10px;
+    grid-template-columns: 310px;
+    grid-template-rows: 170px 110px 60px;
     grid-template-areas: "image" "text" "stats";
   
     border-radius: 18px;
@@ -93,14 +94,14 @@
   
     transition: 0.5s ease;
     cursor: pointer;
-    margin:30px;
+    margin:25px;
   }
   .card-image {
     
-    background-image: url("https://vignette.wikia.nocookie.net/naruto/images/a/a5/Sakura_Part_III.png/revision/latest/scale-to-width-down/340?cb=20170726100410");
+    background-image: url("images/anu.jpg");
     background-repeat: no-repeat;
-    background-position: center;
- background-size: contain;
+    background-position:center;
+ background-size: 220px 200px;
   }
   
   .card-text {
@@ -159,10 +160,11 @@
   
   /*card2*/
   .card-image.card2 {
-    background: url("https://i.pinimg.com/originals/b1/9a/d1/b19ad11b94a44c2331bcbd6ee926fa47.jpg");
+    
+    background: url("images/nanma.jpg");
     background-repeat: no-repeat;
     background-position: center;
- background-size: contain;
+    background-size: 250px 200px;
   }
   
   .card-stats.card2 .border {
@@ -175,10 +177,10 @@
   }
   /*card3*/
   .card-image.card3 {
-    background-image: url("https://avatarfiles.alphacoders.com/158/158221.png");
+    background: url("images/shikha.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 230px 200px;
    
   }
   
