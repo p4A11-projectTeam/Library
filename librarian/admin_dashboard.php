@@ -1,7 +1,6 @@
 <?php
    session_start();
    if(!isset($_SESSION["librarian"])){
-
    ?>
    <script type="text/javascript">
        window.location="/Library/index.html";
@@ -20,28 +19,24 @@
    $ns = 0;
    $retbks=0;
    $notret=0;
-
    $rm = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[librarian]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
    $rb = mysqli_query($db, "SELECT * FROM `books` ") or die("Error: " . mysqli_error($db));
    $rf = mysqli_query($db, "SELECT * FROM `fine` WHERE status='no';") or die("Error: " . mysqli_error($db));
    $rsm = mysqli_query($db, "SELECT * FROM `messages` WHERE `susername` = '$_SESSION[librarian]' ") or die("Error: " . mysqli_error($db));
    $rib=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='no';") or die("Error: " . mysqli_error($db));
    $rstud=mysqli_query($db, "SELECT * FROM `student` ") or die("Error: " . mysqli_error($db));
-   $rreqbks=mysqli_query($db,"SELECT * FROM `request_books` WHERE status='no';") or die("Error: " . mysqli_error($db));
+   $rretbks=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='yes';") or die("Error: " . mysqli_error($db));
    $rnotret=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='no';") or die("Error: " . mysqli_error($db));
-
    $nm = mysqli_num_rows($rm);
    $nb = mysqli_num_rows($rb);
    $nf = mysqli_num_rows($rf);
    $sm = mysqli_num_rows($rsm);
    $ib = mysqli_num_rows($rib);
    $ns = mysqli_num_rows($rstud);
-   $reqbks = mysqli_num_rows($rreqbks);
+   $retbks = mysqli_num_rows($rretbks);
    $notret = mysqli_num_rows($rnotret);
-
    
 ?>
-
         <!-- page content area main -->
         <div class="right_col" role="main">
             <div class="">
@@ -49,17 +44,14 @@
                     <div class="title_left">
                         <h3>Dashboard</h3>
                     </div>
-
                     
                 </div>
-
                 <div class="clearfix"></div>
                 <div class="row" style="min-height:500px">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
                                 <h2>Library Control Panel</h2>
-
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
@@ -180,18 +172,18 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-primary" style="background-color:#4ad983 !important;"><a href="requestedbooks.php" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg  btn-primary" style="background-color:#4ad983 !important;"><a href="#" style="all:unset;cursor:default">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">
-                                                            <?php  echo $reqbks; ?>
+                                                            <?php  echo $retbks; ?>
                                                         </div>
                                                         <div>
-                                                            Requests Pending
+                                                            Returned
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <i class="fa fa-plus" aria-hidden="true" style="font-size:80px"></i>
+                                                        <i class="fa fa-check" aria-hidden="true" style="font-size:80px"></i>
                                                     </div>
                                                 </div>
                                             </a></div>    
@@ -222,12 +214,10 @@
                                                         </div>
                                                         <div>
                                                             <span id="datetime"></span>
-
                                                             <script>
                                                             var dt = new Date();
                                                             document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
                                                             </script>
-
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
@@ -239,7 +229,8 @@
                                         
                                     </div>
                                 </div>
-                                    
+
+
 </div>
 
 
@@ -252,8 +243,6 @@
             </div>
         </div>
         <!-- /page content -->
-
-
 <?php
     include "footer.php";
 ?>
