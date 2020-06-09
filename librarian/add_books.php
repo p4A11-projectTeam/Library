@@ -63,7 +63,9 @@
                                             <td><div class="text-left col-md-3">Book image</div><input type="file" id="img" name="img" accept="image/*"></td>
                                         </tr>
                                         <tr>
+
                                             <td><input type="submit" name="submit1" value="Add" class="btn btn-dark btn-lg btn-block submit"></td>
+
                                         </tr>
                                         
                                     </table>

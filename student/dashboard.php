@@ -118,7 +118,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-muted"><a href="issued_books.php" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg" style="background-color: rgba(0,100,0, 0.7) !important; color: white !important;"><a href="issued_books.php" style="all:unset;cursor:pointer">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">

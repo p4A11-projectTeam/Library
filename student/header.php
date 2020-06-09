@@ -43,6 +43,7 @@
 
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
+                <form action="pro_pic.php" method="post" enctype="multipart/form-data"></form>
                     <div class="profile_pic">
                         <img src="https://i.pinimg.com/474x/82/dc/c2/82dcc2802f24719351ea09ab20c8c66e.jpg" alt="..." class="img-circle profile_img">
                     </div>

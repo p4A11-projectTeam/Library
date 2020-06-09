@@ -51,12 +51,7 @@
     font-size: 30px !important;
     margin-top: 30px;
   }
-  #adminToggle2{
-      margin-right: 30px;
-      margin-left: 26%;
-      margin-top: 20px;
-  }
-
+ 
   /* -------Admin and Student form ---------*/
   h1, h2, .user, .pass{ 
     text-align: center;
