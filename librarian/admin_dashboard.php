@@ -131,10 +131,10 @@
                                             </a></div>    
                                         </div>  
                                         <div class="col-sm-4">
-                                            <div class="btn-lg" onMouseOver="this.style.color='rgba(64,49,69,1)'" onMouseOut="this.style.color='#fff'" style="background-color:#af84bd !important; color: white !important; background-color" ><a href="send_notification.php" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg"  onMouseOut="this.style.color='#fff'" style="background-color:#af84bd !important; color: white !important; background-color" ><a href="send_notification.php" style="all:unset;cursor:pointer">
                                                 <div class="row">
                                                     <div class="col-sm-7">
-                                                        <div class="h1" style="color:#00000000">
+                                                        <div class="h1" >
                                                              <?php  echo $sm; ?>
                                                         </div>
                                                         <div style="color:#ffffff">
@@ -148,7 +148,7 @@
                                             </a></div>   
                                         </div>  
                                         <div class="col-sm-4">
-                                            <div class="btn-lg  btn-primary" onMouseOver="this.style.color='rgba(64,49,69,1)'" onMouseOut="this.style.color='#fff'" style="background-color: rgba(0,100,0, 0.7) !important; color: white !important;"><a href="student_info.php" style="all:unset;cursor:pointer">
+                                            <div class="btn-lg  btn-primary"  onMouseOut="this.style.color='#fff'" style="background-color: rgba(0,100,0, 0.7) !important; color: white !important;"><a href="student_info.php" style="all:unset;cursor:pointer">
                                                 <div class="row">
                                                     <div class="col-sm-7">
                                                         <div class="h1">
@@ -209,7 +209,7 @@
                                             <div class="btn-lg btn-info">
                                                 <div class="row ">
                                                     <div class="col-sm-7">
-                                                        <div class="h1" >
+                                                        <div class="h1" style="color:#ffffff">
                                                            Date
                                                         </div>
                                                         <div>
@@ -221,7 +221,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <i class="fa fa-calendar fa-5x" aria-hidden="true"></i>
+                                                        <i class="fa fa-calendar fa-5x" aria-hidden="true" color="#fff"></i>
                                                     </div>
                                             </div>
                                             
