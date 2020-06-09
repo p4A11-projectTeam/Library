@@ -58,6 +58,7 @@
                                 
                             </form>
                             </div>
+                            <!--
                             <table class="table table-bordered">
                                     <tr>
                                     <th>Title</th>
@@ -81,6 +82,7 @@
                                         }
                                     ?>
                                 </table>
+                                -->
                         </div>
                     </div>
                 </div>
