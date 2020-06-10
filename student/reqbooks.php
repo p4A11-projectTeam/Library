@@ -47,7 +47,7 @@
     <tr>
         <td>
         <h5> Enter the Edition:</h5>
-            <input type="number" class="form-control" name="edition" placeholder="Edition">
+            <input type="number" class="form-control" name="edition" placeholder="Edition" required="">
         </td>
     </tr>
     <tr>

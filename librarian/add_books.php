@@ -60,7 +60,7 @@
                                         </tr>
                                         <tr>
                                             
-                                            <td><div class="text-left col-md-3">Book image</div><input type="file" id="img" name="img" accept="image/*"></td>
+                                            <td><div class="text-left col-md-3">Book image</div><input type="file" id="img" name="img" accept="image/*" required=""></td>
                                         </tr>
                                         <tr>
 
@@ -97,7 +97,7 @@
         $qty=$_POST["qty"];
         
 
-        $query = "insert into Books(isbn,name,author,edition,price,qty,img,availability,libusername) values('$isbn','$name','$author','$edition','$price','$qty','$dst1','$qty','$_SESSION[librarian]')"; //Insert query to add book details into the book_info table
+        $query = "insert into Books(isbn,name,author,edition,price,qty,img,availability) values('$isbn','$name','$author','$edition','$price','$qty','$dst1','$qty')"; //Insert query to add book details into the book_info table
         $result = mysqli_query($db,$query);
         ?>
 
