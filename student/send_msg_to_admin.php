@@ -39,14 +39,17 @@
                                     
                                     <tr>
                                         <td>
-                                            <input type="text" class="form-control" name="title" placeholder="Enter Title">
+                                            <input type="text" class="form-control" name="title" placeholder="Enter Title" required="">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             Message <br>
-                                            <textarea name="msg" class="form-control">
-                                            </textarea>
+                                            <textarea rows="7"
+                  cols="50" 
+                  name="msg"
+                  class="form-control" 
+                  required></textarea>
                                         </td>
                                     </tr>
                                     <tr>
