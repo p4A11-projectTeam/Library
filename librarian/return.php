@@ -36,9 +36,9 @@ if($rdate < $a)
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                         <div class="x_content">
-    <div class="alert alert-danger col-lg-6 col-lg-push-3">
-    <h4 style="text-align:center">Due date has passed, Pay Fine :(</h4> 
-                                                                </div>
+   <a href="fine.php"> <div  class="alert alert-danger col-lg-6 col-lg-push-3">
+    <h4 href="fine.php" style="text-align:center">Due date has passed, Pay Fine :(</h4> 
+                                                                </div></a>
                                                                 </div>
             </div>
         </div>
