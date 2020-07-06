@@ -20,8 +20,6 @@ include "connection.php";
                     <div class="title_left">
                         <h3></h3>
                     </div>
-
-                   
                 </div>
 
                 <div class="clearfix"></div>
@@ -54,11 +52,9 @@ include "connection.php";
 
                             }
                             
-
                                     $res5=mysqli_query($db,"SELECT * FROM `fine` where `status`='not paid'") or die("Error: " . mysqli_error($db));
                                     if(mysqli_num_rows($res5) != 0){
 
-                                    
                                     echo "<table class='table table-bordered'>";
                                     echo "<tr>";
                                     echo "<th>"; echo "USN"; echo "</th>";
@@ -81,7 +77,6 @@ include "connection.php";
                                         mysqli_query($db,"UPDATE `fine` SET `amount`= '$fine' where `fiid`='$fiid' ");
                                         echo "<td>"; echo $row5["amount"]; echo "</td>";
                                         
-                                        
                                         echo "<td class='bg-info'>"; ?> 
                                         <a href="fine_approve.php?id=<?php echo $row5["fiid"];?>">Approve</a> 
                                         
@@ -95,11 +90,9 @@ include "connection.php";
                                 }
                                 else{
                                     ?>
-
-
-    <div class="alert alert-danger col-lg-6 col-lg-push-3">
-    <h4 style="text-align:center">No Fines Due</h4> 
-                                                                </div>
+                                        <div class="alert alert-danger col-lg-6 col-lg-push-3">
+                                        <h4 style="text-align:center">No Fines Due</h4> 
+                                     </div>
                                                                
                                     <?php
 

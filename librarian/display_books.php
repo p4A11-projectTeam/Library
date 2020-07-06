@@ -46,15 +46,19 @@
                             <div class="x_content">
                             <!--form to search books -->
                             <form name=form1 action="" method="post">
-                                <input type="text" name="t1" class="form-control" placeholder="Enter book name">
-                                <input type="submit" name="submit1" value="search books" class="btn btn-default">
+                            <table class="table">
+                            <tr>
+                                <td><input type="text" name="t1" class="form-control" placeholder="Enter Book Name or Author or Edition"></td>
+                                <td><input type="submit" name="submit1" value="search books" class="form-control btn btn-default"></td>
+                            </tr>
+                            </table>
                             </form>
 
                                 <?php
 
                                     if(isset($_POST["submit1"])){
                                         $i=0;
-                                        $res=mysqli_query($db,"SELECT * FROM `books` where name like ('$_POST[t1]%') ");
+                                        $res=mysqli_query($db,"SELECT * FROM `books` where name like ('$_POST[t1]%') or author like ('$_POST[t1]%') or edition like ('$_POST[t1]%') ");
                                         echo "<table class='table table-bordered'>";
                                         echo "<tr>";
                                         echo "<th>"; echo "ISBN"; echo "</th>";
