@@ -107,7 +107,7 @@ include "connection.php";
         </div>
         <!-- /page content -->
 
-
+<!-- This is the footer -->
 <?php
     include "footer.php";
 ?>
