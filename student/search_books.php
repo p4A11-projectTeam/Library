@@ -46,7 +46,7 @@
                             <form name="form1" action="" method="post">
                             <table class="table">
                             <tr>
-                            <td><input type="text" name="t1" placeholder="Enter Books Name" required class="form-control"></td>
+                            <td><input type="text" name="t1" placeholder="Enter Books Name or Author or Edition" class="form-control"></td>
                             <td><input class="form-control btn btn-default" type="submit" name="submit1" value="Search Books"  ></td>
                             </tr>
                             </table>
@@ -54,8 +54,98 @@
                     <?php
                     if(isset($_POST["submit1"]))
                     {
+                        if($_POST["t1"]==""){
+                           
+                                $i=0;
+                                  $res=mysqli_query($db,"select * from books where availability>0");
+                                  echo "<table class='table table-bordered'>";
+                                  echo "<tr>";
+                                  while($row=mysqli_fetch_array($res))
+                                  {
+                                      $i=$i+1;
+                                      echo "<td>";
+                                      ?>   <img alt=" <?php echo $row["name"] ; ?>" id="myImg<?php echo $i ; ?>" src="../librarian/<?php echo $row["img"] ; ?>" height="100" width="100"  style="cursor: pointer" >
+                                      <!-- The Modal -->
+                                    <div id="myModal<?php echo $i ; ?>" class="modal">
+        
+                                    <!-- The Close Button -->
+                                    <span class="close<?php echo $i ; ?>" style=" position: absolute;
+                                                                                    top: 35px;
+                                                                                    right: 85px;
+                                                                                    color: #f1f1f1;
+                                                                                    font-size: 40px;
+                                                                                    font-weight: bold;
+                                                                                    transition: 0.3s;
+                                                                                    cursor: pointer"
+                                                                                    
+                                                                                    >&times;</span>
+        
+                                    <!-- Modal Content (The Image) -->
+                                    <img class="modal-content" id="img01<?php echo $i ; ?>" style="margin: auto;
+                                                                                            display: block;
+                                                                                            width: 80%;
+                                                                                            max-width: 700px;">
+        
+                                    <!-- Modal Caption (Image Text) -->
+                                    <div id="caption<?php echo $i ; ?>" style="margin: auto;
+                                                                            font-size: 30px;
+                                                                            display: block;
+                                                                            width: 80%;
+                                                                            max-width: 700px;
+                                                                            text-align: center;
+                                                                            color: #ccc;
+                                                                            padding: 10px 0;
+                                                                            height: 150px;"></div>
+                                    </div>
+                                    <script type="text/javascript">
+                                    var modal = document.getElementById("myModal<?php echo $i ; ?>");
+        
+                                    // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                    var img = document.getElementById("myImg<?php echo $i ; ?>");
+                                    var modalImg = document.getElementById("img01<?php echo $i ; ?>");
+                                    var captionText = document.getElementById("caption<?php echo $i ; ?>");
+                                    img.onclick = function(){
+                                    modal.style.display = "block";
+                                    modalImg.src = this.src;
+                                    captionText.innerHTML = this.alt;
+                                    }
+        
+                                    // Get the <span> element that closes the modal
+                                    var span = document.getElementsByClassName("close<?php echo $i ; ?>")[0];
+        
+                                    // When the user clicks on <span> (x), close the modal
+                                    span.onclick = function() {
+                                    modal.style.display = "none";
+                                    }
+        
+                                    </script>
+        
+        
+                                      <?php
+                                      echo "<br>";
+                                      echo "<b>" . $row["name"] . "</b>";
+                                      echo "<br>";
+                                      echo "<b>" . "edition:". $row["edition"] . "</b>";
+                                      echo "<br>";
+                                      echo "<b>" . "available:". $row["availability"] . "</b>";
+                                     
+                                      echo "</td>";
+                                      if($i==4)
+                                      {
+                                          echo "</tr>";
+                                          echo "<tr>";
+                                          $i=0;
+                                      }
+        
+        
+                                  }
+                                  echo "</tr>";
+                                 echo "</table>";
+        
+                            
+                        }else{
                         $i=0;
-                          $res=mysqli_query($db,"select * from books where name like('%$_POST[t1]%')");
+                          $res=mysqli_query($db,"select * from books where name like('%$_POST[t1]%') or author like ('$_POST[t1]%') or edition like ('$_POST[t1]%')");
                           echo "<table class='table table-bordered'>";
                           echo "<tr>";
                           while($row=mysqli_fetch_array($res))
@@ -128,7 +218,7 @@
                               echo "<b>" . "available:". $row["availability"] . "</b>";
                               echo "<br>";
                               
-                              if($i==6)
+                              if($i==4)
                               {
                                   echo "</tr>";
                                   echo "<tr>";
@@ -140,7 +230,7 @@
                           echo "</tr>";
                          echo "</table>";
 
-                    }
+                    }}
                     else{
                         $i=0;
                           $res=mysqli_query($db,"select * from books where availability>0");
@@ -216,7 +306,7 @@
                               echo "<b>" . "available:". $row["availability"] . "</b>";
                              
                               echo "</td>";
-                              if($i==6)
+                              if($i==4)
                               {
                                   echo "</tr>";
                                   echo "<tr>";
