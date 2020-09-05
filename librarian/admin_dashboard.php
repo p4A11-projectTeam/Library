@@ -20,7 +20,7 @@
    $retbks=0;
    $notret=0;
    $rm = mysqli_query($db, "SELECT * FROM `messages` WHERE `dusername` = '$_SESSION[librarian]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
-   $rb = mysqli_query($db, "SELECT * FROM `books` ") or die("Error: " . mysqli_error($db));
+   $rb = mysqli_query($db, "SELECT * FROM `catalog` ") or die("Error: " . mysqli_error($db));
    $rf = mysqli_query($db, "SELECT * FROM `fine` WHERE status='not paid';") or die("Error: " . mysqli_error($db));
    $rsm = mysqli_query($db, "SELECT * FROM `messages` WHERE `susername` = '$_SESSION[librarian]' && `read1`='n' ") or die("Error: " . mysqli_error($db));
    $rib=mysqli_query($db,"SELECT * FROM `issue_books` WHERE return_status='no';") or die("Error: " . mysqli_error($db));

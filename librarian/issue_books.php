@@ -123,7 +123,7 @@ include "connection.php";
                                                          </div>
                                                              <select name="books_name"  class="form-control selectpicker">
                                                                  <?php
-                                                                 $res=mysqli_query($db,"select  distinct name  from books");
+                                                                 $res=mysqli_query($db,"select  distinct name  from catalog");
                                                                  while($row=mysqli_fetch_array($res))
                                                                  {
                                                                     
@@ -214,7 +214,7 @@ include "connection.php";
 
                                                         {  
                                                             $qty=0;
-                                                            $res=mysqli_query($db,"SELECT * FROM `books` where `name`='$_POST[books_name]'");
+                                                            $res=mysqli_query($db,"SELECT * FROM `catalog` where `name`='$_POST[books_name]'");
                                                             while($row=mysqli_fetch_array($res))
                                                             {
                                                                 $qty=$row["availability"];
@@ -243,7 +243,7 @@ include "connection.php";
                                                             
                                                             $query="INSERT INTO `issue_books`(`issueid`, `usn`, `books_name`, `issue_date`, `return_date`, `edition`, `student_name`) VALUES (' ','$usn','$books_name','$issue_date',' ','$edition','$student_name')";
                                                           $result= mysqli_query($db,$query);
-                                                          mysqli_query($db,"UPDATE `books` SET `availability`=`availability`-1 where `name`='$books_name' and `edition`='$edition'");
+                                                          mysqli_query($db,"UPDATE `catalog` SET `availability`=`availability`-1 where `name`='$books_name' and `edition`='$edition'");
                                                         
                                                         ?>
                                                         <script type="text/javascript">

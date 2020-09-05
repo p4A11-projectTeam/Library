@@ -97,7 +97,7 @@
         $qty=$_POST["qty"];
         
 
-        $query = "insert into Books(isbn,name,author,edition,price,qty,img,availability) values('$isbn','$name','$author','$edition','$price','$qty','$dst1','$qty')"; //Insert query to add book details into the book_info table
+        $query = "insert into catalog(isbn,name,author,edition,price,qty,img,availability) values('$isbn','$name','$author','$edition','$price','$qty','$dst1','$qty')"; //Insert query to add book details into the book_info table
         $result = mysqli_query($db,$query);
         ?>
 

@@ -57,7 +57,7 @@ else{
     $res=mysqli_query($db,"UPDATE `issue_books` SET `return_status`= 'yes' WHERE `issueid`='$id'");
     
     
-mysqli_query($db,"UPDATE `books` SET `availability`=`availability`+1 WHERE `name`='$books_name' and `edition`='$edition'");
+mysqli_query($db,"UPDATE `catalog` SET `availability`=`availability`+1 WHERE `name`='$books_name' and `edition`='$edition'");
 
     ?>
    
