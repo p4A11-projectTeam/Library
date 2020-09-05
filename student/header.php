@@ -67,7 +67,7 @@
                             </li>
                             <li><a href="/Library/student/issued_books.php"><i class="fa fa-bookmark"></i> My issued books </a>
                             </li>
-                            <li><a href="search_books.php"><i class="fa fa-edit"></i> Search Books </a>
+                            <li><a href="search_books.php"><i class="fa fa-edit"></i> Search  </a>
                             </li>
                             <li><a href="reqbooks.php"><i class="fa fa-plus"></i> Request Books </a>
                             </li>
