@@ -38,7 +38,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Search Books</h2>
+                                <h2>Search in Catalog</h2>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -46,8 +46,8 @@
                             <form name="form1" action="" method="post">
                             <table class="table">
                             <tr>
-                            <td><input type="text" name="t1" placeholder="Enter Books Name or Author or Edition" class="form-control"></td>
-                            <td><input class="form-control btn btn-default" type="submit" name="submit1" value="Search Books"  ></td>
+                            <td><input type="text" name="t1" placeholder="Search for..." class="form-control"></td>
+                            <td><input class="form-control btn btn-default" type="submit" name="submit1" value="Search"  ></td>
                             </tr>
                             </table>
                             </form>
@@ -122,10 +122,14 @@
         
         
                                       <?php
+                                       echo "<br>";
+                                       echo "<b>" . "Category:".$row["category"] . "</b>";
                                       echo "<br>";
                                       echo "<b>" . $row["name"] . "</b>";
                                       echo "<br>";
-                                      echo "<b>" . "edition:". $row["edition"] . "</b>";
+                                      echo "<b>" . "edition/date:". $row["edition"] . "</b>";
+                                      echo "<br>";
+                                      echo "<b>" . "shelf-rack no. :".$row["shelf_rack"] . "</b>";
                                       echo "<br>";
                                       echo "<b>" . "available:". $row["availability"] . "</b>";
                                      
@@ -208,13 +212,15 @@
                             </script>
                             
                               <?php
+                               echo "<br>";
+                               echo "<b>" . "Category:".$row["category"] . "</b>";
                               echo "<br>";
                               echo "<b>" . $row["name"] . "</b>";
                               echo "<br>";
-                             
-                              echo "<b>" . "edition:". $row["edition"] . "</b>";
+                              echo "<b>" . "edition/date:". $row["edition"] . "</b>";
                               echo "<br>";
-                             
+                              echo "<b>" . "shelf-rack no. :".$row["shelf_rack"] . "</b>";
+                              echo "<br>";
                               echo "<b>" . "available:". $row["availability"] . "</b>";
                               echo "<br>";
                               
@@ -299,9 +305,13 @@
 
                               <?php
                               echo "<br>";
+                              echo "<b>" . "Category:".$row["category"] . "</b>";
+                              echo "<br>";
                               echo "<b>" . $row["name"] . "</b>";
                               echo "<br>";
-                              echo "<b>" . "edition:". $row["edition"] . "</b>";
+                              echo "<b>" . "edition/date:". $row["edition"] . "</b>";
+                              echo "<br>";
+                              echo "<b>" . "shelf-rack no. :". $row["shelf_rack"] . "</b>";
                               echo "<br>";
                               echo "<b>" . "available:". $row["availability"] . "</b>";
                              
