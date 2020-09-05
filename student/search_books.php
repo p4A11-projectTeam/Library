@@ -57,7 +57,7 @@
                         if($_POST["t1"]==""){
                            
                                 $i=0;
-                                  $res=mysqli_query($db,"select * from books where availability>0");
+                                  $res=mysqli_query($db,"select * from catalog where availability>0");
                                   echo "<table class='table table-bordered'>";
                                   echo "<tr>";
                                   while($row=mysqli_fetch_array($res))
@@ -145,7 +145,7 @@
                             
                         }else{
                         $i=0;
-                          $res=mysqli_query($db,"select * from books where name like('%$_POST[t1]%') or author like ('$_POST[t1]%') or edition like ('$_POST[t1]%')");
+                          $res=mysqli_query($db,"select * from catalog where name like('%$_POST[t1]%') or author like ('$_POST[t1]%') or edition like ('$_POST[t1]%')");
                           echo "<table class='table table-bordered'>";
                           echo "<tr>";
                           while($row=mysqli_fetch_array($res))
@@ -233,7 +233,7 @@
                     }}
                     else{
                         $i=0;
-                          $res=mysqli_query($db,"select * from books where availability>0");
+                          $res=mysqli_query($db,"select * from catalog where availability>0");
                           echo "<table class='table table-bordered'>";
                           echo "<tr>";
                           while($row=mysqli_fetch_array($res))

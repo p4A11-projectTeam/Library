@@ -36,7 +36,7 @@
                             <div class="x_content">
                             <?php
                             $i=0;
-                          $res=mysqli_query($db,"select * from books where availability>0");
+                          $res=mysqli_query($db,"select * from catalog where availability>0");
                           echo "<table class='table table-bordered'>";
                           echo "<tr>";
                           while($row=mysqli_fetch_array($res))
