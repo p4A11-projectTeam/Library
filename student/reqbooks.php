@@ -114,6 +114,7 @@
     ?>
     <script type="text/javascript">
         alert("Book Requested successfully!");
+        window.location="reqbooks.php";
     </script>
     <?php
         

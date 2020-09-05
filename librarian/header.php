@@ -65,15 +65,15 @@
                             <li><a href="/Library/librarian/student_info.php"><i class="fa fa-user"></i> All student info </a>
 
                             </li>
-                            <li><a href="/Library/librarian/add_books.php"><i class="fa fa-edit"></i> Add Books </a>
+                            <li><a href="/Library/librarian/add_books.php"><i class="fa fa-edit"></i> Add </a>
 
                             </li>
-                            <li><a href="/Library/librarian/display_books.php"><i class="fa fa-desktop"></i> Display Books </a>
+                            <li><a href="/Library/librarian/display_books.php"><i class="fa fa-desktop"></i> Display </a>
 
                             </li>
                             <li><a href="/Library/librarian/issue_books.php"><i class="fa fa-indent"></i> Issue Books </a>
                             </li>
-                            <li><a href="/Library/librarian/requestedbooks.php"><i class="fa fa-plus"></i> Requested Books </a>
+                            <li><a href="/Library/librarian/requestedbooks.php"><i class="fa fa-plus"></i> Request Section </a>
                             </li>
                             <li><a href="/Library/librarian/return_books.php"><i class="fa fa-level-down"></i> Return Books </a>
 

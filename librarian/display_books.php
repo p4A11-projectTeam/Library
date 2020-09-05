@@ -39,7 +39,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Books</h2>
+                                <h2>Catalog</h2>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -48,8 +48,8 @@
                             <form name=form1 action="" method="post">
                             <table class="table">
                             <tr>
-                                <td><input type="text" name="t1" class="form-control" placeholder="Enter Book Name or Author or Edition"></td>
-                                <td><input type="submit" name="submit1" value="search books" class="form-control btn btn-default"></td>
+                                <td><input type="text" name="t1" class="form-control" placeholder="Search for..."></td>
+                                <td><input type="submit" name="submit1" value="Search" class="form-control btn btn-default"></td>
                             </tr>
                             </table>
                             </form>
@@ -61,10 +61,12 @@
                                         $res=mysqli_query($db,"SELECT * FROM `catalog` where name like ('$_POST[t1]%') or author like ('$_POST[t1]%') or edition like ('$_POST[t1]%') ");
                                         echo "<table class='table table-bordered'>";
                                         echo "<tr>";
-                                        echo "<th>"; echo "ISBN"; echo "</th>";
+                                        echo "<th>"; echo "Category"; echo "</th>";
+                                        echo "<th>"; echo "ID"; echo "</th>";
+                                        echo "<th>"; echo "Shelf-Rack No."; echo "</th>";
                                         echo "<th>"; echo "Name"; echo "</th>";
                                         echo "<th>"; echo "Author"; echo "</th>";
-                                        echo "<th>"; echo "Edition"; echo "</th>";
+                                        echo "<th>"; echo "Edition/Date"; echo "</th>";
                                         echo "<th>"; echo "Price"; echo "</th>";
                                         echo "<th>"; echo "Quantity"; echo "</th>";
                                         echo "<th>"; echo "Image"; echo "</th>";
@@ -74,6 +76,8 @@
                                         while ($row=mysqli_fetch_array($res)){
                                             $i=$i+1;
                                             echo "<tr>";
+                                            echo "<td>"; echo $row["category"]; echo "</td>";
+                                            echo "<td>"; echo $row["shelf_rack"]; echo "</td>";
                                             echo "<td>"; echo $row["isbn"]; echo "</td>";
                                             echo "<td>"; echo $row["name"]; echo "</td>";
                                             echo "<td>"; echo $row["author"]; echo "</td>";
@@ -150,10 +154,12 @@
                                     $res=mysqli_query($db,"SELECT * FROM `catalog`");
                                     echo "<table class='table table-bordered'>";
                                     echo "<tr>";
-                                    echo "<th>"; echo "ISBN"; echo "</th>";
+                                    echo "<th>"; echo "Category"; echo "</th>";
+                                    echo "<th>"; echo "Shelf-Rack No."; echo "</th>";
+                                    echo "<th>"; echo "ID"; echo "</th>";
                                     echo "<th>"; echo "Name"; echo "</th>";
                                     echo "<th>"; echo "Author"; echo "</th>";
-                                    echo "<th>"; echo "Edition"; echo "</th>";
+                                    echo "<th>"; echo "Edition/Date"; echo "</th>";
                                     echo "<th>"; echo "Price"; echo "</th>";
                                     echo "<th>"; echo "Quantity"; echo "</th>";
                                     echo "<th>"; echo "Image"; echo "</th>";
@@ -163,6 +169,8 @@
                                     while ($row=mysqli_fetch_array($res)){
                                         $i=$i+1;
                                         echo "<tr>";
+                                        echo "<td>"; echo $row["category"]; echo "</td>";
+                                        echo "<td>"; echo $row["shelf_rack"]; echo "</td>";
                                         echo "<td>"; echo $row["isbn"]; echo "</td>";
                                         echo "<td>"; echo $row["name"]; echo "</td>";
                                         echo "<td>"; echo $row["author"]; echo "</td>";

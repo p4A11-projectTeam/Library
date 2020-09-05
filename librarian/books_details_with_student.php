@@ -36,7 +36,7 @@
                             <div class="x_content">
                             <?php
                             $i=0;
-                          $res=mysqli_query($db,"select * from catalog where availability>0");
+                          $res=mysqli_query($db,"select * from catalog where availability>0 and category='Books'");
                           echo "<table class='table table-bordered'>";
                           echo "<tr>";
                           while($row=mysqli_fetch_array($res))
@@ -48,6 +48,8 @@
                               echo "<b>" . $row["name"] . "</b>";
                               echo "<br>";
                               echo "<b>" . "Edition:". $row["edition"] . "</b>";
+                              echo "<br>";
+                              echo "<b>" . "Shelf-Rack No.:".$row["shelf_rack"] . "</b>";
                               echo "<br>";
                               echo "<b>" . "Total books:". $row["qty"] . "</b>";
                               echo "<br>";
