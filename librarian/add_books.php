@@ -43,7 +43,7 @@
                                             <td><input type="text" class="form-control" placeholder="Category(Books/Research Papers/Journals/Magazines..)" name="category" required=""></td>
                                         </tr>
                                         <tr>
-                                            <td><input type="number" class="form-control" placeholder="ISBN/PAPER NO./ID" name="isbn" required=""></td>
+                                            <td><input type="number" class="form-control" placeholder="ISBN/PAPER NO./ISSN" name="isbn" required=""></td>
                                         </tr>
                                         <tr>
                                             <td><input type="text" class="form-control" placeholder="Shelf-Rack No." name="shelf_no" required=""></td>
@@ -112,7 +112,7 @@
         ?>
 
         <script type="text/javascript">
-            alert("Book inserted successfully");
+            alert("Successfully added to Catalog!");
         </script>
 
         <?php

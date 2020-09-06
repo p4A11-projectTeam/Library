@@ -123,7 +123,7 @@ include "connection.php";
                                                          </div>
                                                              <select name="books_name"  class="form-control selectpicker">
                                                                  <?php
-                                                                 $res=mysqli_query($db,"select  distinct name  from catalog");
+                                                                 $res=mysqli_query($db,"select  distinct name  from catalog where category like '%Books%' ");
                                                                  while($row=mysqli_fetch_array($res))
                                                                  {
                                                                     
@@ -161,7 +161,7 @@ include "connection.php";
                                                     <tr>
                                                      <td>
                                                      <div class="text-left col-md-9">  
-                                                     <h5> Enter the edition (<a href="books_details_with_student.php"> Check The Edition </a>)</h5>
+                                                     <h5> Enter the edition (<a href="display_books.php"> Check The Edition </a>)</h5>
                                                      </div>   
                                                      <input type="number" class="form-control" placeholder="Book edition" name="edition"  required="">
                                                      </td>

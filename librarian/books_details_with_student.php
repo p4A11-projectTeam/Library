@@ -36,7 +36,7 @@
                             <div class="x_content">
                             <?php
                             $i=0;
-                          $res=mysqli_query($db,"select * from catalog where availability>0 and category='Books'");
+                          $res=mysqli_query($db,"select * from catalog where availability>0 and category like '%Books%'");
                           echo "<table class='table table-bordered'>";
                           echo "<tr>";
                           while($row=mysqli_fetch_array($res))
@@ -63,7 +63,7 @@
                                                                                                                                     margin-top:0px;
                                                                                                                                     border-color:black;">Student Record of this book</a> <?php
                               echo "</td>";
-                              if($i==6)
+                              if($i==4)
                               {
                                   echo "</tr>";
                                   echo "<tr>";

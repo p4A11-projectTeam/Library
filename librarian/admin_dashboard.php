@@ -65,7 +65,7 @@
                                                             <?php  echo $nb; ?>
                                                         </div>
                                                         <div style="color:#ffffff">
-                                                            Manage Books
+                                                            Manage
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
